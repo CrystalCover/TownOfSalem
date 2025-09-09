@@ -1,4 +1,4 @@
-# TownOfSalem
+# Quality of Salem
 This mod can only be installed for the **Steam version**.
 
 ## Installation
