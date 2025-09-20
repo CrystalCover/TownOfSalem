@@ -39,3 +39,5 @@ All features are client-side, and they do not affect the gameplay for you or oth
 - Lobby users now have friend and block buttons for you to block or unblock them, send them a friend request, accept their friend request, or remove them from your friends.
 - When a friend goes online or offline, you'll get notified by a toaster notification, if enabled.
 - Notification messages regarding the friends and block system will be displayed in the pregame and endgame lobbies.
+
+There are more features not listed here. Go find them out!
