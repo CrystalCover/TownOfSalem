@@ -1,4 +1,4 @@
-# Quality of Salem
+# Quality of Salem v2.0.0 (debug build)
 This mod can only be installed for the **Steam version**.
 
 ## Installation
