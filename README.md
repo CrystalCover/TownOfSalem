@@ -1,10 +1,15 @@
-# Quality of Salem v2.0.0 (debug build)
+# Quality of Salem v2.0.10 (WIP)
 This mod can only be installed for the **Steam version**.
 
 ## Installation
 1. Install the latest version of [BepInEx](https://github.com/BepInEx/BepInEx/releases) for 64-bit.
 2. Run the application once, then close it.
-3. Place *QualityOfSalem.dll* within "\BepInEx\plugins" (from *TownOfSalem.exe*).
+3. Place *QualityOfSalem.dll* within "{SteamLibrary}\steamapps\common\TownOfSalem\BepInEx\plugins".
+
+## Updating
+1. Replace the old *QualityOfSalem.dll* with the new one.
+2. Delete *ExtendedStringTable.en-USS.xml* located within "{SteamLibrary}\steamapps\common\TownOfSalem\BepInEx\config".
+3. Additionally, delete *GameRules.xml* located within "{SteamLibrary}\steamapps\common\TownOfSalem\TownOfSalem_Data\StreamingAssets\res\WebAssets\XMLData".
 
 ## Features
 All features are client-side, and they do not affect the gameplay for you or others.
@@ -12,10 +17,9 @@ All features are client-side, and they do not affect the gameplay for you or oth
 ### Fixes
 - When you are a Blackmailer and whisper to someone, you will no longer hear your own whisper as if it came from someone else.
 - Day and night headers in the chat log are now properly filtered in the Spanish language.
-- When you are an Arsonist and a Guardian Angel protects a doused player, their douse will be removed to prevent confusion.
 
 ### Reversals
-- T\*vern Keeper and B\*otlegger are renamed back to Escort and Consort, their role icons and all associated strings are also changed back.
+- T\*v\*rn K\*\*p\*r and B\*\*tl\*gg\*r are renamed back to Escort and Consort, their role icons and all associated strings are also changed back.
 - The word *hang* is replaced back with the word *lynch*.
 - Gender pronouns, *he* and *she*, are added back.
 - Suicidal death reasons are restored.
@@ -35,9 +39,9 @@ All features are client-side, and they do not affect the gameplay for you or oth
 - The role list in non-custom lobbies will always show the full role list, regardless of the number of players in the lobby.
 
 ### New
-- If you enabled the "Remember Me" checkbox on the login screen, the game will automatically log you in the next time the application is launched.
-- Lobby users now have friend and block buttons for you to block or unblock them, send them a friend request, accept their friend request, or remove them from your friends.
+- If you enabled the "Remember Me" (now "Log Me In Automatically") checkbox on the login screen, the game will automatically log you in the next time the application is launched.
+- Lobby users now have friend and block buttons for you to block or unblock them, send them a friend request, accept or decline their friend request, or remove them from your friends.
 - When a friend goes online or offline, you'll get notified by a toaster notification, if enabled.
-- Notification messages regarding the friends and block system will be displayed in the pregame and endgame lobbies.
+- Notification messages regarding the friends and block system will be displayed in the pre-game and end-game lobbies.
 
-There are more features not listed here. Go find them out!
+Not everything may be listed here. Go find the others out!
