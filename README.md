@@ -4,12 +4,12 @@ This mod can only be installed for the **Steam version**.
 ## Installation
 1. Install the latest version of [BepInEx](https://github.com/BepInEx/BepInEx/releases) for 64-bit.
 2. Run the application once, then close it.
-3. Place *QualityOfSalem.dll* within "{SteamLibrary}\steamapps\common\TownOfSalem\BepInEx\plugins".
+3. Place *QualityOfSalem.dll* within "\TownOfSalem\BepInEx\plugins".
 
 ## Updating
 1. Replace the old *QualityOfSalem.dll* with the new one.
-2. Delete *ExtendedStringTable.en-USS.xml* located within "{SteamLibrary}\steamapps\common\TownOfSalem\BepInEx\config".
-3. Additionally, delete *GameRules.xml* located within "{SteamLibrary}\steamapps\common\TownOfSalem\TownOfSalem_Data\StreamingAssets\res\WebAssets\XMLData".
+2. Delete *ExtendedStringTable.en-USS.xml* located within "\TownOfSalem\BepInEx\config".
+3. Additionally, delete *GameRules.xml* located within "\TownOfSalem\TownOfSalem_Data\StreamingAssets\res\WebAssets\XMLData".
 
 ## Features
 All features are client-side, and they do not affect the gameplay for you or others.
