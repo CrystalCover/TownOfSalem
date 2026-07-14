@@ -9,7 +9,7 @@ This mod can only be installed for the **Steam version**.
 ## Updating
 1. Replace the old *QualityOfSalem.dll* with the new one.
 2. Delete *ExtendedStringTable.en-USS.xml* located within "\TownOfSalem\BepInEx\config".
-3. Additionally, delete *GameRules.xml* located within "\TownOfSalem\TownOfSalem_Data\StreamingAssets\res\WebAssets\XMLData".
+3. Optionally, delete *GameRules.xml* located within "\TownOfSalem\TownOfSalem_Data\StreamingAssets\res\WebAssets\XMLData".
 
 ## Features
 All features are client-side, and they do not affect the gameplay for you or others.
