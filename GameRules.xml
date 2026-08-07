@@ -1,0 +1,3320 @@
+<?xml version="1.0"?>
+<GameRules xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <GameRuleTypes>
+    <GameRuleType>
+      <Name l10n="GUI_MODE_NORMAL">Normal</Name>
+      <Summary l10n="GUI_NORMAL_TYPE_SUMMARY" />
+      <GameRuleModes name="Normal Game Rule Modes">
+        <GameRuleMode name="Classic" id="1" />
+        <GameRuleMode name="CovenClassic" id="10" />
+        <GameRuleMode name="RankedPractice" id="8" />
+        <GameRuleMode name="CovenRankedPractice" id="11" />
+        <GameRuleMode name="CovenRanked" id="12" />
+        <GameRuleMode name="CovenMafia" id="18" />
+        <GameRuleMode name="Ranked" id="6" />
+      </GameRuleModes>
+    </GameRuleType>
+    <GameRuleType>
+      <Name l10n="GUI_MODE_CUSTOM">Custom</Name>
+      <Summary l10n="GUI_CUSTOM_TYPE_SUMMARY" />
+      <GameRuleModes name="Custom Game Rule Modes">
+        <GameRuleMode name="Coven DevRoom" id="15" />
+        <GameRuleMode name="Classic DevRoom" id="22" />
+        <GameRuleMode name="Custom" id="2" />
+        <GameRuleMode name="CovenCustom" id="9" />
+        <GameRuleMode name="RapidMode" id="4" />
+      </GameRuleModes>
+    </GameRuleType>
+    <GameRuleType>
+      <Name l10n="GUI_MODE_CHAOS">Chaos</Name>
+      <Summary l10n="GUI_CHAOS_TYPE_SUMMARY" />
+      <GameRuleModes name="Chaos Game Rule Modes">
+        <GameRuleMode name="AllAny" id="3" />
+        <GameRuleMode name="CovenAllAny" id="13" />
+        <GameRuleMode name="Rainbow" id="7" />
+        <GameRuleMode name="Vigilantics" id="5" />
+        <GameRuleMode name="DraculasPalace" id="19" />
+        <GameRuleMode name="CovenLovers" id="16" />
+        <GameRuleMode name="CovenRivals" id="17" />
+        <GameRuleMode name="CovenVIP" id="14" />
+        <GameRuleMode name="Coven Town Traitor" id="20" />
+        <GameRuleMode name="Classic Town Traitor" id="21" />
+      </GameRuleModes>
+    </GameRuleType>
+  </GameRuleTypes>
+  <GameTimingProfiles>
+    <TimingProfile id="standard">
+      <Timing id="lobby_start" value="10" />
+      <Timing id="role_info" value="25" />
+      <Timing id="pick_names" value="25" />
+      <Timing id="first_day_transition" value="5" />
+      <Timing id="first_day" value="15" />
+      <Timing id="night_transition" value="5" />
+      <Timing id="night" value="37" />
+      <Timing id="start_day_transition" value="6" />
+      <Timing id="notice_resurrection" value="4" />
+      <Timing id="notice_who_died" value="8" />
+      <Timing id="notice_last_will" value="6" />
+      <Timing id="notice_death_note" value="8" />
+      <Timing id="notice_role_reveal" value="3" />
+      <Timing id="discussion" value="45" />
+      <Timing id="game_over" value="60" />
+      <Timing id="voting" value="30" />
+      <Timing id="defense_transition" value="5" />
+      <Timing id="defense" value="20" />
+      <Timing id="judgement" value="20" />
+      <Timing id="notice_judgement" value="3" />
+      <Timing id="last_words" value="7" />
+      <Timing id="innocent" value="5" />
+      <Timing id="execute" value="10" />
+    </TimingProfile>
+    <TimingProfile id="rapid">
+      <Timing id="lobby_start" value="10" />
+      <Timing id="role_info" value="25" />
+      <Timing id="pick_names" value="25" />
+      <Timing id="first_day_transition" value="5" />
+      <Timing id="first_day" value="15" />
+      <Timing id="night_transition" value="5" />
+      <Timing id="night" value="10" />
+      <Timing id="start_day" value="5" />
+      <Timing id="start_day_transition" value="6" />
+      <Timing id="notice_resurrection" value="4" />
+      <Timing id="notice_who_died" value="8" />
+      <Timing id="notice_last_will" value="6" />
+      <Timing id="notice_death_note" value="8" />
+      <Timing id="notice_role_reveal" value="3" />
+      <Timing id="discussion" value="15" />
+      <Timing id="game_over" value="60" />
+      <Timing id="voting" value="30" />
+      <Timing id="defense_transition" value="5" />
+      <Timing id="defense" value="20" />
+      <Timing id="judgement" value="20" />
+      <Timing id="notice_judgement" value="3" />
+      <Timing id="last_words" value="7" />
+      <Timing id="innocent" value="5" />
+      <Timing id="execute" value="10" />
+    </TimingProfile>
+  </GameTimingProfiles>
+  <Modes>
+    <Mode id="1" name="Classic" permissionLevel="0" lobbyType="Classic" minimumPlayers="7" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="1" timingProfile="standard" catalog="" roleList="Classic">
+      <Label l10n="GUI_MODE_CLASSIC" />
+      <Summary l10n="GUI_CLASSIC_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="2" name="Custom" permissionLevel="0" lobbyType="Custom" minimumPlayers="7" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="Custom" roleList="">
+      <Label l10n="GUI_MODE_CUSTOM" />
+      <Summary l10n="GUI_CUSTOM_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="3" name="AllAny" permissionLevel="0" lobbyType="Classic" minimumPlayers="7" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="AllAny">
+      <Label l10n="GUI_MODE_ALL_ANY" />
+      <Summary l10n="GUI_ALL_ANY_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="4" name="RapidMode" permissionLevel="0" lobbyType="Custom" minimumPlayers="7" trialCount="3" rotating="false" rapidMode="true" defaultForBrand="" timingProfile="rapid" catalog="Custom" roleList="">
+      <Label l10n="GUI_MODE_RAPID_MODE" />
+      <Summary l10n="GUI_RAPID_MODE_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="5" name="Vigilantics" permissionLevel="0" lobbyType="Classic" minimumPlayers="7" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="Vigilantics">
+      <Label l10n="GUI_MODE_VIGILANTICS" />
+      <Summary l10n="GUI_VIGILANTICS_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="6" name="Ranked" permissionLevel="0" lobbyType="Ranked" minimumPlayers="15" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="Ranked">
+      <Label l10n="GUI_MODE_RANKED" />
+      <Summary l10n="GUI_RANKED_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags>
+        <Flag>NoParty</Flag>
+        <Flag>RankedPlay</Flag>
+      </Flags>
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="7" name="Rainbow" permissionLevel="0" lobbyType="Classic" minimumPlayers="7" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="Rainbow">
+      <Label l10n="GUI_MODE_RAINBOW" />
+      <Summary l10n="GUI_RAINBOW_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="8" name="RankedPractice" permissionLevel="0" lobbyType="Classic" minimumPlayers="15" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="Ranked">
+      <Label l10n="GUI_MODE_RANKED_PRACTICE" />
+      <Summary l10n="GUI_RANKED_PRACTICE_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="9" name="CovenCustom" permissionLevel="1" lobbyType="Custom" minimumPlayers="7" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="2" timingProfile="standard" catalog="CovenCustom" roleList="">
+      <Label l10n="GUI_MODE_COVEN_CUSTOM" />
+      <Summary l10n="GUI_COVEN_CUSTOM_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="10" name="CovenClassic" permissionLevel="1" lobbyType="Classic" minimumPlayers="7" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="CovenClassic">
+      <Label l10n="GUI_MODE_COVEN_CLASSIC" />
+      <Summary l10n="GUI_COVEN_CLASSIC_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="11" name="CovenRankedPractice" permissionLevel="1" lobbyType="Classic" minimumPlayers="15" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="CovenRankedPractice">
+      <Label l10n="GUI_MODE_COVEN_RANKED_PRACTICE" />
+      <Summary l10n="GUI_COVEN_RANKED_PRACTICE_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="12" name="CovenRanked" permissionLevel="1" lobbyType="Ranked" minimumPlayers="15" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="CovenRanked">
+      <Label l10n="GUI_MODE_COVEN_RANKED" />
+      <Summary l10n="GUI_COVEN_RANKED_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags>
+        <Flag>NoParty</Flag>
+        <Flag>RankedPlay</Flag>
+      </Flags>
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="13" name="CovenAllAny" permissionLevel="1" lobbyType="Classic" minimumPlayers="7" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="CovenAllAny">
+      <Label l10n="GUI_MODE_COVEN_ALL_ANY" />
+      <Summary l10n="GUI_COVEN_ALL_ANY_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="14" name="CovenVIP" permissionLevel="1" lobbyType="Classic" minimumPlayers="15" trialCount="3" rotating="true" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="CovenVIP">
+      <Label l10n="GUI_MODE_COVEN_VIP" />
+      <Summary l10n="GUI_COVEN_VIP_SUMMARY" />
+      <SpecialDesc l10n="GUI_COVEN_VIP_DESC" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="15" name="CovenDevRoom" permissionLevel="1" lobbyType="Custom" minimumPlayers="2" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="CovenDevRoom" roleList="">
+      <Label l10n="GUI_MODE_DEV_ROOM" />
+      <Summary l10n="GUI_DEV_ROOM_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="16" name="CovenLovers" permissionLevel="1" lobbyType="Classic" minimumPlayers="15" trialCount="3" rotating="true" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="CovenLovers">
+      <Label l10n="GUI_MODE_COVEN_LOVERS" />
+      <Summary l10n="GUI_COVEN_LOVERS_SUMMARY" />
+      <SpecialDesc l10n="COVEN_LOVERS_DESC" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="17" name="CovenRivals" permissionLevel="1" lobbyType="Classic" minimumPlayers="15" trialCount="3" rotating="true" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="CovenRivals">
+      <Label l10n="GUI_MODE_COVEN_RIVALS" />
+      <Summary l10n="GUI_COVEN_RIVALS_SUMMARY" />
+      <SpecialDesc l10n="GUI_COVEN_RIVALS_DESC" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="18" name="CovenMafia" permissionLevel="1" lobbyType="Classic" minimumPlayers="15" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="CovenMafia">
+      <Label l10n="GUI_MODE_COVEN_MAFIA" />
+      <Summary l10n="GUI_COVEN_MAFIA_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="19" name="DraculasPalace" permissionLevel="0" lobbyType="Classic" minimumPlayers="15" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="DraculasPalace">
+      <Label l10n="GUI_MODE_DRACULAS_PALACE" />
+      <Summary l10n="GUI_DRACULAS_PALACE_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="20" name="CovenTownTraitor" permissionLevel="1" lobbyType="Classic" minimumPlayers="15" trialCount="3" rotating="true" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="CovenTownTraitor">
+      <Label l10n="GUI_MODE_COVEN_TOWN_TRAITOR" />
+      <Summary l10n="GUI_COVEN_TOWN_TRAITOR_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="21" name="ClassicTownTraitor" permissionLevel="0" lobbyType="Classic" minimumPlayers="15" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="" roleList="ClassicTownTraitor">
+      <Label l10n="GUI_MODE_CLASSIC_TOWN_TRAITOR" />
+      <Summary l10n="GUI_CLASSIC_TOWN_TRAITOR_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+    <Mode id="22" name="ClassicDevRoom" permissionLevel="0" lobbyType="Custom" minimumPlayers="2" trialCount="3" rotating="false" rapidMode="false" defaultForBrand="" timingProfile="standard" catalog="ClassicDevRoom" roleList="">
+      <Label l10n="GUI_MODE_DEV_ROOM" />
+      <Summary l10n="GUI_DEV_ROOM_SUMMARY" />
+      <SpecialDesc l10n="" />
+      <Flags />
+      <RoleListRuleSets />
+    </Mode>
+  </Modes>
+  <Catalogs>
+    <Catalog id="Custom">
+      <CatalogEntry name="Town" id="0" faction="1" color="#7FFF00" limit="0">
+        <CatalogEntryRole name="Bodyguard" id="0" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Doctor" id="1" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Escort" id="2" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Investigator" id="3" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Jailor" id="4" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Lookout" id="5" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Mayor" id="6" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Medium" id="7" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Retributionist" id="8" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Sheriff" id="9" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Spy" id="10" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Transporter" id="11" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Vampire Hunter" id="12" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Veteran" id="13" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Vigilante" id="14" limit="0" faction="" factionlimit="0" />
+      </CatalogEntry>
+      <CatalogEntry name="Mafia" id="1" faction="2" color="#DD0000" limit="4">
+        <CatalogEntryRole name="Ambusher" id="51" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Blackmailer" id="15" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Consigliere" id="16" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Consort" id="17" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Disguiser" id="18" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Forger" id="19" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Framer" id="20" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Godfather" id="21" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Hypnotist" id="50" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Janitor" id="22" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Mafioso" id="23" limit="1" faction="" factionlimit="4" />
+      </CatalogEntry>
+      <CatalogEntry name="Neutral" id="2" faction="" color="#CCCCCC" limit="0">
+        <CatalogEntryRole name="Amnesiac" id="24" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Arsonist" id="25" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Executioner" id="26" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Jester" id="27" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Serialkiller" id="28" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Survivor" id="29" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Vampire" id="30" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Werewolf" id="31" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Witch" id="32" limit="0" faction="" factionlimit="0" />
+      </CatalogEntry>
+      <CatalogEntry name="Random" id="3" faction="" color="#1D7CF2" limit="0">
+        <CatalogEntryRole name="Random Town" id="33" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Town Investigative" id="34" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Town Protective" id="35" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Town Killing" id="36" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Town Support" id="37" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Random Mafia" id="38" limit="4" faction="2" factionlimit="4" />
+        <CatalogEntryRole name="Mafia Support" id="39" limit="4" faction="2" factionlimit="4" />
+        <CatalogEntryRole name="Mafia Deception" id="40" limit="4" faction="2" factionlimit="4" />
+        <CatalogEntryRole name="Random Neutral" id="41" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Neutral Benign" id="42" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Neutral Evil" id="43" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Neutral Killing" id="44" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Any" id="45" limit="0" faction="" factionlimit="0" />
+      </CatalogEntry>
+    </Catalog>
+    <Catalog id="CovenCustom">
+      <CatalogEntry name="Town" id="0" faction="1" color="#7FFF00" limit="0">
+        <CatalogEntryRole name="Bodyguard" id="0" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Crusader" id="46" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Doctor" id="1" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Escort" id="2" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Investigator" id="3" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Jailor" id="4" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Lookout" id="5" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Mayor" id="6" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Medium" id="7" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Psychic" id="49" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Retributionist" id="8" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Sheriff" id="9" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Spy" id="10" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Tracker" id="47" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Transporter" id="11" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Trapper" id="48" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Vampire Hunter" id="12" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Veteran" id="13" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Vigilante" id="14" limit="0" faction="" factionlimit="0" />
+      </CatalogEntry>
+      <CatalogEntry name="Mafia" id="1" faction="2" color="#DD0000" limit="4">
+        <CatalogEntryRole name="Ambusher" id="51" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Blackmailer" id="15" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Consigliere" id="16" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Consort" id="17" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Disguiser" id="18" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Forger" id="19" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Framer" id="20" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Godfather" id="21" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Hypnotist" id="50" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Janitor" id="22" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Mafioso" id="23" limit="1" faction="" factionlimit="4" />
+      </CatalogEntry>
+      <CatalogEntry name="Coven" id="4" faction="3" color="#BF5FFF" limit="4">
+        <CatalogEntryRole name="Coven Leader" id="56" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Hex Master" id="58" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Medusa" id="61" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Necromancer" id="59" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Poisoner" id="60" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Potion Master" id="57" limit="1" faction="" factionlimit="4" />
+      </CatalogEntry>
+      <CatalogEntry name="Neutral" id="2" faction="" color="#CCCCCC" limit="0">
+        <CatalogEntryRole name="Amnesiac" id="24" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Arsonist" id="25" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Executioner" id="26" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Guardian Angel" id="54" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Jester" id="27" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Pirate" id="55" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Plaguebearer" id="52" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Serialkiller" id="28" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Survivor" id="29" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Vampire" id="30" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Werewolf" id="31" limit="1" faction="" factionlimit="0" />
+      </CatalogEntry>
+      <CatalogEntry name="Random" id="3" faction="" color="#1D7CF2" limit="0">
+        <CatalogEntryRole name="Coven Random Coven" id="62" limit="4" faction="3" factionlimit="4" />
+        <CatalogEntryRole name="Coven Random Town" id="63" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Coven Town Investigative" id="64" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Coven Town Protective" id="65" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Coven Town Killing" id="66" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Coven Town Support" id="67" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Coven Random Mafia" id="68" limit="4" faction="2" factionlimit="4" />
+        <CatalogEntryRole name="Coven Mafia Support" id="69" limit="4" faction="2" factionlimit="4" />
+        <CatalogEntryRole name="Coven Mafia Deception" id="70" limit="4" faction="2" factionlimit="4" />
+        <CatalogEntryRole name="Coven Random Neutral" id="71" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Coven Neutral Benign" id="72" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Coven Neutral Chaos" id="76" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Coven Neutral Evil" id="73" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Coven Neutral Killing" id="74" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Coven Any" id="75" limit="0" faction="" factionlimit="0" />
+      </CatalogEntry>
+    </Catalog>
+    <Catalog id="ClassicDevRoom">
+      <CatalogEntry name="Town" id="0" faction="1" color="#7FFF00" limit="0">
+        <CatalogEntryRole name="Bodyguard" id="0" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Doctor" id="1" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Escort" id="2" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Investigator" id="3" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Jailor" id="4" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Lookout" id="5" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Mayor" id="6" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Medium" id="7" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Retributionist" id="8" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Sheriff" id="9" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Spy" id="10" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Transporter" id="11" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Vampire Hunter" id="12" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Veteran" id="13" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Vigilante" id="14" limit="0" faction="" factionlimit="0" />
+      </CatalogEntry>
+      <CatalogEntry name="Mafia" id="1" faction="2" color="#DD0000" limit="4">
+        <CatalogEntryRole name="Ambusher" id="51" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Blackmailer" id="15" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Consigliere" id="16" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Consort" id="17" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Disguiser" id="18" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Forger" id="19" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Framer" id="20" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Godfather" id="21" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Hypnotist" id="50" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Janitor" id="22" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Mafioso" id="23" limit="1" faction="" factionlimit="4" />
+      </CatalogEntry>
+      <CatalogEntry name="Neutral" id="2" faction="" color="#CCCCCC" limit="0">
+        <CatalogEntryRole name="Amnesiac" id="24" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Arsonist" id="25" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Executioner" id="26" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Jester" id="27" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Serialkiller" id="28" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Survivor" id="29" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Vampire" id="30" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Werewolf" id="31" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Witch" id="32" limit="0" faction="" factionlimit="0" />
+      </CatalogEntry>
+      <CatalogEntry name="Random" id="3" faction="" color="#1D7CF2" limit="0">
+        <CatalogEntryRole name="Random Town" id="33" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Town Investigative" id="34" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Town Protective" id="35" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Town Killing" id="36" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Town Support" id="37" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Random Mafia" id="38" limit="4" faction="2" factionlimit="4" />
+        <CatalogEntryRole name="Mafia Support" id="39" limit="4" faction="2" factionlimit="4" />
+        <CatalogEntryRole name="Mafia Deception" id="40" limit="4" faction="2" factionlimit="4" />
+        <CatalogEntryRole name="Random Neutral" id="41" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Neutral Benign" id="42" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Neutral Evil" id="43" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Neutral Killing" id="44" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Any" id="45" limit="0" faction="" factionlimit="0" />
+      </CatalogEntry>
+    </Catalog>
+    <Catalog id="CovenDevRoom">
+      <CatalogEntry name="Town" id="0" faction="1" color="#7FFF00" limit="0">
+        <CatalogEntryRole name="Bodyguard" id="0" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Crusader" id="46" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Doctor" id="1" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Escort" id="2" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Investigator" id="3" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Jailor" id="4" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Lookout" id="5" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Mayor" id="6" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Medium" id="7" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Psychic" id="49" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Retributionist" id="8" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Sheriff" id="9" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Spy" id="10" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Tracker" id="47" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Transporter" id="11" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Trapper" id="48" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Vampire Hunter" id="12" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Veteran" id="13" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Vigilante" id="14" limit="0" faction="" factionlimit="0" />
+      </CatalogEntry>
+      <CatalogEntry name="Mafia" id="1" faction="2" color="#DD0000" limit="4">
+        <CatalogEntryRole name="Ambusher" id="51" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Blackmailer" id="15" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Consigliere" id="16" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Consort" id="17" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Disguiser" id="18" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Forger" id="19" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Framer" id="20" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Godfather" id="21" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Hypnotist" id="50" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Janitor" id="22" limit="0" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Mafioso" id="23" limit="1" faction="" factionlimit="4" />
+      </CatalogEntry>
+      <CatalogEntry name="Coven" id="4" faction="3" color="#BF5FFF" limit="4">
+        <CatalogEntryRole name="Coven Leader" id="56" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Hex Master" id="58" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Medusa" id="61" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Necromancer" id="59" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Poisoner" id="60" limit="1" faction="" factionlimit="4" />
+        <CatalogEntryRole name="Potion Master" id="57" limit="1" faction="" factionlimit="4" />
+      </CatalogEntry>
+      <CatalogEntry name="Neutral" id="2" faction="" color="#CCCCCC" limit="0">
+        <CatalogEntryRole name="Amnesiac" id="24" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Arsonist" id="25" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Executioner" id="26" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Guardian Angel" id="54" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Jester" id="27" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Juggernaut" id="53" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Pirate" id="55" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Plaguebearer" id="52" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Serialkiller" id="28" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Survivor" id="29" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Vampire" id="30" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Werewolf" id="31" limit="1" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Witch" id="32" limit="0" faction="" factionlimit="0" />
+      </CatalogEntry>
+      <CatalogEntry name="Random" id="3" faction="" color="#1D7CF2" limit="0">
+        <CatalogEntryRole name="Coven Random Coven" id="62" limit="4" faction="3" factionlimit="4" />
+        <CatalogEntryRole name="Coven Random Town" id="63" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Coven Town Investigative" id="64" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Coven Town Protective" id="65" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Coven Town Killing" id="66" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Coven Town Support" id="67" limit="0" faction="1" factionlimit="0" />
+        <CatalogEntryRole name="Coven Random Mafia" id="68" limit="4" faction="2" factionlimit="4" />
+        <CatalogEntryRole name="Coven Mafia Support" id="69" limit="4" faction="2" factionlimit="4" />
+        <CatalogEntryRole name="Coven Mafia Deception" id="70" limit="4" faction="2" factionlimit="4" />
+        <CatalogEntryRole name="Coven Random Neutral" id="71" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Coven Neutral Benign" id="72" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Coven Neutral Evil" id="73" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Coven Neutral Killing" id="74" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Coven Neutral Chaos" id="76" limit="0" faction="" factionlimit="0" />
+        <CatalogEntryRole name="Coven Any" id="75" limit="0" faction="" factionlimit="0" />
+      </CatalogEntry>
+    </Catalog>
+  </Catalogs>
+  <RoleLists>
+    <RoleList id="Classic">
+      <RoleListRole name="Sheriff" id="9" />
+      <RoleListRole name="Lookout" id="5" />
+      <RoleListRole name="Investigator" id="3" />
+      <RoleListRole name="Jailor" id="4" />
+      <RoleListRole name="Doctor" id="1" />
+      <RoleListRole name="Escort" id="2" />
+      <RoleListRole name="Medium" id="7" />
+      <RoleListRole name="Town Killing" id="36" />
+      <RoleListRole name="Random Town" id="33" />
+      <RoleListRole name="Godfather" id="21" />
+      <RoleListRole name="Mafioso" id="23" />
+      <RoleListRole name="Framer" id="20" />
+      <RoleListRole name="Serial Killer" id="28" />
+      <RoleListRole name="Executioner" id="26" />
+      <RoleListRole name="Jester" id="27" />
+    </RoleList>
+    <RoleList id="Rainbow">
+      <RoleListRole name="Godfather" id="21" />
+      <RoleListRole name="Arsonist" id="25" />
+      <RoleListRole name="Survivor" id="29" />
+      <RoleListRole name="Jailor" id="4" />
+      <RoleListRole name="Amnesiac" id="24" />
+      <RoleListRole name="Serial Killer" id="28" />
+      <RoleListRole name="Witch" id="32" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Witch" id="32" />
+      <RoleListRole name="Serial Killer" id="28" />
+      <RoleListRole name="Amnesiac" id="24" />
+      <RoleListRole name="Veteran" id="13" />
+      <RoleListRole name="Survivor" id="29" />
+      <RoleListRole name="Arsonist" id="25" />
+      <RoleListRole name="Mafioso" id="23" />
+    </RoleList>
+    <RoleList id="Vigilantics">
+      <RoleListRole name="Vigilante" id="14" />
+      <RoleListRole name="Witch" id="32" />
+      <RoleListRole name="Vigilante" id="14" />
+      <RoleListRole name="Vigilante" id="14" />
+      <RoleListRole name="Witch" id="32" />
+      <RoleListRole name="Vigilante" id="14" />
+      <RoleListRole name="Vigilante" id="14" />
+      <RoleListRole name="Witch" id="32" />
+      <RoleListRole name="Vigilante" id="14" />
+      <RoleListRole name="Vigilante" id="14" />
+      <RoleListRole name="Vigilante" id="14" />
+      <RoleListRole name="Witch" id="32" />
+      <RoleListRole name="Vigilante" id="14" />
+      <RoleListRole name="Vigilante" id="14" />
+      <RoleListRole name="Witch" id="32" />
+    </RoleList>
+    <RoleList id="AllAny">
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+      <RoleListRole name="Any" id="45" />
+    </RoleList>
+    <RoleList id="Ranked">
+      <RoleListRole name="Jailor" id="4" />
+      <RoleListRole name="Town Investigative" id="34" />
+      <RoleListRole name="Town Investigative" id="34" />
+      <RoleListRole name="Town Protective" id="35" />
+      <RoleListRole name="Random Town" id="33" />
+      <RoleListRole name="Random Town" id="33" />
+      <RoleListRole name="Random Town" id="33" />
+      <RoleListRole name="Random Town" id="33" />
+      <RoleListRole name="Random Town" id="33" />
+      <RoleListRole name="Godfather" id="21" />
+      <RoleListRole name="Mafioso" id="23" />
+      <RoleListRole name="Mafia (Support)" id="39" />
+      <RoleListRole name="Random Mafia" id="38" />
+      <RoleListRole name="Neutral (Killing)" id="44" />
+      <RoleListRole name="Neutral (Evil)" id="43" />
+    </RoleList>
+    <RoleList id="CovenClassic">
+      <RoleListRole name="Sheriff" id="9" />
+      <RoleListRole name="Lookout" id="5" />
+      <RoleListRole name="Psychic" id="49" />
+      <RoleListRole name="Jailor" id="4" />
+      <RoleListRole name="Coven_Town_Protective" id="65" />
+      <RoleListRole name="Coven Leader" id="56" />
+      <RoleListRole name="Potion Master" id="57" />
+      <RoleListRole name="Executioner" id="26" />
+      <RoleListRole name="Coven Random Coven" id="62" />
+      <RoleListRole name="Medusa" id="61" />
+      <RoleListRole name="Coven_Random_Town" id="63" />
+      <RoleListRole name="Plaguebearer" id="52" />
+      <RoleListRole name="Coven_Random_Town" id="63" />
+      <RoleListRole name="Pirate" id="55" />
+      <RoleListRole name="Coven_Random_Town" id="63" />
+    </RoleList>
+    <RoleList id="CovenRankedPractice">
+      <RoleListRole name="Jailor" id="4" />
+      <RoleListRole name="Coven Town Investigative" id="64" />
+      <RoleListRole name="Coven Town Investigative" id="64" />
+      <RoleListRole name="Coven Town Support" id="67" />
+      <RoleListRole name="Coven Town Protective" id="65" />
+      <RoleListRole name="Coven Town Killing" id="66" />
+      <RoleListRole name="Coven Random Town" id="63" />
+      <RoleListRole name="Coven Random Town" id="63" />
+      <RoleListRole name="Coven Random Town" id="63" />
+      <RoleListRole name="Coven Leader" id="56" />
+      <RoleListRole name="Medusa" id="61" />
+      <RoleListRole name="Coven Random Coven" id="62" />
+      <RoleListRole name="Coven Random Coven" id="62" />
+      <RoleListRole name="Coven Neutral Killing" id="74" />
+      <RoleListRole name="Coven Neutral Evil" id="73" />
+    </RoleList>
+    <RoleList id="CovenRanked">
+      <RoleListRole name="Jailor" id="4" />
+      <RoleListRole name="Coven Town Investigative" id="64" />
+      <RoleListRole name="Coven Town Investigative" id="64" />
+      <RoleListRole name="Coven Town Support" id="67" />
+      <RoleListRole name="Coven Town Protective" id="65" />
+      <RoleListRole name="Coven Town Killing" id="66" />
+      <RoleListRole name="Coven Random Town" id="63" />
+      <RoleListRole name="Coven Random Town" id="63" />
+      <RoleListRole name="Coven Random Town" id="63" />
+      <RoleListRole name="Coven Leader" id="56" />
+      <RoleListRole name="Medusa" id="61" />
+      <RoleListRole name="Coven Random Coven" id="62" />
+      <RoleListRole name="Coven Random Coven" id="62" />
+      <RoleListRole name="Coven Neutral Killing" id="74" />
+      <RoleListRole name="Coven Neutral Evil" id="73" />
+    </RoleList>
+    <RoleList id="CovenAllAny">
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+      <RoleListRole name="Coven Any" id="75" />
+    </RoleList>
+    <RoleList id="CovenVIP">
+      <RoleListRole name="Sheriff" id="9" />
+      <RoleListRole name="Crusader" id="46" />
+      <RoleListRole name="Psychic" id="49" />
+      <RoleListRole name="Vigilante" id="14" />
+      <RoleListRole name="Trapper" id="48" />
+      <RoleListRole name="Coven Leader" id="56" />
+      <RoleListRole name="Potion Master" id="57" />
+      <RoleListRole name="Guardian Angel" id="54" />
+      <RoleListRole name="Coven Random Coven" id="62" />
+      <RoleListRole name="Medusa" id="61" />
+      <RoleListRole name="Tracker" id="47" />
+      <RoleListRole name="Coven_Town_Protective" id="65" />
+      <RoleListRole name="Coven_Town_Support" id="67" />
+      <RoleListRole name="Pirate" id="55" />
+      <RoleListRole name="Coven_Town_Protective" id="65" />
+    </RoleList>
+    <RoleList id="CovenLovers">
+      <RoleListRole name="Sheriff" id="9" />
+      <RoleListRole name="Doctor" id="1" />
+      <RoleListRole name="Psychic" id="49" />
+      <RoleListRole name="Tracker" id="47" />
+      <RoleListRole name="Coven Town Protective" id="65" />
+      <RoleListRole name="Coven Town Protective" id="65" />
+      <RoleListRole name="Coven Town Support" id="67" />
+      <RoleListRole name="Coven Town Support" id="67" />
+      <RoleListRole name="Pirate" id="55" />
+      <RoleListRole name="Arsonist" id="25" />
+      <RoleListRole name="Werewolf" id="31" />
+      <RoleListRole name="Serialkiller" id="28" />
+      <RoleListRole name="Godfather" id="21" />
+      <RoleListRole name="Medusa" id="61" />
+      <RoleListRole name="Plaguebearer" id="52" />
+    </RoleList>
+    <RoleList id="CovenRivals">
+      <RoleListRole name="Sheriff" id="9" />
+      <RoleListRole name="Sheriff" id="9" />
+      <RoleListRole name="Lookout" id="5" />
+      <RoleListRole name="Lookout" id="5" />
+      <RoleListRole name="Tracker" id="47" />
+      <RoleListRole name="Tracker" id="47" />
+      <RoleListRole name="Coven_Town_Protective" id="65" />
+      <RoleListRole name="Coven_Town_Protective" id="65" />
+      <RoleListRole name="Coven_Town_Killing" id="66" />
+      <RoleListRole name="Medusa" id="61" />
+      <RoleListRole name="Werewolf" id="31" />
+      <RoleListRole name="Serialkiller" id="28" />
+      <RoleListRole name="Pirate" id="55" />
+      <RoleListRole name="Plaguebearer" id="52" />
+      <RoleListRole name="Amnesiac" id="24" />
+    </RoleList>
+    <RoleList id="CovenMafia">
+      <RoleListRole name="Sheriff" id="9" />
+      <RoleListRole name="Lookout" id="5" />
+      <RoleListRole name="Psychic" id="49" />
+      <RoleListRole name="Jailor" id="4" />
+      <RoleListRole name="Coven_Town_Protective" id="65" />
+      <RoleListRole name="Godfather" id="21" />
+      <RoleListRole name="Ambusher" id="51" />
+      <RoleListRole name="Executioner" id="26" />
+      <RoleListRole name="Coven Random Mafia" id="68" />
+      <RoleListRole name="Hypnotist" id="50" />
+      <RoleListRole name="Coven_Random_Town" id="63" />
+      <RoleListRole name="Plaguebearer" id="52" />
+      <RoleListRole name="Coven_Random_Town" id="63" />
+      <RoleListRole name="Pirate" id="55" />
+      <RoleListRole name="Coven_Random_Town" id="63" />
+    </RoleList>
+    <RoleList id="DraculasPalace">
+      <RoleListRole name="Doctor" id="1" />
+      <RoleListRole name="Lookout" id="5" />
+      <RoleListRole name="Lookout" id="5" />
+      <RoleListRole name="Jailor" id="4" />
+      <RoleListRole name="Vigilante" id="14" />
+      <RoleListRole name="Town Protective" id="35" />
+      <RoleListRole name="Town Support" id="37" />
+      <RoleListRole name="Town Support" id="37" />
+      <RoleListRole name="Vampire Hunter" id="12" />
+      <RoleListRole name="Jester" id="27" />
+      <RoleListRole name="Witch" id="32" />
+      <RoleListRole name="Vampire" id="30" />
+      <RoleListRole name="Vampire" id="30" />
+      <RoleListRole name="Vampire" id="30" />
+      <RoleListRole name="Vampire" id="30" />
+    </RoleList>
+    <RoleList id="CovenTownTraitor">
+      <RoleListRole name="Sheriff" id="9" />
+      <RoleListRole name="Jailor" id="4" />
+      <RoleListRole name="Crusader" id="46" />
+      <RoleListRole name="Tracker" id="47" />
+      <RoleListRole name="Coven Town Investigative" id="64" />
+      <RoleListRole name="Coven Town Protective" id="65" />
+      <RoleListRole name="Coven Town Killing" id="66" />
+      <RoleListRole name="Coven Town Support" id="67" />
+      <RoleListRole name="Coven Random Town" id="63" />
+      <RoleListRole name="Coven Random Town" id="63" />
+      <RoleListRole name="Coven Random Town" id="63" />
+      <RoleListRole name="Coven Leader" id="56" />
+      <RoleListRole name="Medusa" id="61" />
+      <RoleListRole name="Coven Random Coven" id="62" />
+      <RoleListRole name="Coven Random Coven" id="62" />
+    </RoleList>
+    <RoleList id="ClassicTownTraitor">
+      <RoleListRole name="Sheriff" id="9" />
+      <RoleListRole name="Jailor" id="4" />
+      <RoleListRole name="Doctor" id="1" />
+      <RoleListRole name="Lookout" id="5" />
+      <RoleListRole name="Town Investigative" id="34" />
+      <RoleListRole name="Town Protective" id="35" />
+      <RoleListRole name="Town Killing" id="36" />
+      <RoleListRole name="Town Support" id="37" />
+      <RoleListRole name="Random Town" id="33" />
+      <RoleListRole name="Random Town" id="33" />
+      <RoleListRole name="Random Town" id="33" />
+      <RoleListRole name="Godfather" id="21" />
+      <RoleListRole name="Mafioso" id="23" />
+      <RoleListRole name="Random Mafio" id="38" />
+      <RoleListRole name="Witch" id="32" />
+    </RoleList>
+  </RoleLists>
+  <Factions>
+    <Faction name="Town" icon="inGameFilters_AllPlayers" id="1" />
+    <Faction name="Mafia" icon="inGameFilters_Faction_Mafia" id="2" />
+    <Faction name="Coven" icon="inGameFilters_Faction_Coven" id="3" />
+    <Faction name="Vampire" icon="inGameFilters_Faction_Vampire" id="4" />
+  </Factions>
+  <Roles>
+    <Role id="0" comment="">
+      <TargetBehavior target="">AnyAliveLimitedSelf</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>SafeZombie</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Bodyguard</Icon>
+        <Icon id="target1">RoleIcon_Bodyguard</Icon>
+        <Icon id="targetsingle">RoleIcon_Bodyguard</Icon>
+      </Icons>
+      <File>Characters/Bodyguard</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Powerful" with_necronomicon="">2</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_0">Bodyguard</Name>
+      <Type l10n="GUI_ROLE_CARD_PROTECTIVE">Protective</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="true" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="1" comment="">
+      <TargetBehavior target="">Doctor</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>SafeZombie</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Doctor_1</Icon>
+        <Icon id="target1">RoleIcon_Doctor_1</Icon>
+        <Icon id="targetsingle">RoleIcon_Doctor_2</Icon>
+      </Icons>
+      <File>Characters/Doctor</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_1">Doctor</Name>
+      <Type l10n="GUI_ROLE_CARD_PROTECTIVE">Protective</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="true" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="2" comment="">
+      <TargetBehavior target="">OtherAlive</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>RoleBlockImmune</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Escort</Icon>
+        <Icon id="target1">RoleIcon_Escort</Icon>
+      </Icons>
+      <File>Characters/Escort</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_2">Escort</Name>
+      <Type l10n="GUI_ROLE_CARD_SUPPORT">Support</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="3" comment="">
+      <TargetBehavior target="">OtherAliveConnected</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Investigator</Icon>
+        <Icon id="target1">RoleIcon_Investigator</Icon>
+      </Icons>
+      <File>Characters/Investigator</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_3">Investigator</Name>
+      <Type l10n="GUI_ROLE_CARD_INVESTIGATIVE">Investigative</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="4" comment="">
+      <TargetBehavior target="">Jailor</TargetBehavior>
+      <DeathNote active="true" type="jailor" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>DayAbility</Tag>
+        <Tag>DayExpandedAbility</Tag>
+        <Tag>NightAbility</Tag>
+        <Tag>RestfulDead</Tag>
+        <Tag>DeferredAbilityUse</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Jailor</Icon>
+        <Icon id="target1">RoleIcon_Jailor</Icon>
+        <Icon id="targetsingle">RoleIcon_Executioner</Icon>
+        <Icon id="targetfixed">RoleIcon_Executioner</Icon>
+      </Icons>
+      <File>Characters/Jailor</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Unstoppable" with_necronomicon="">3</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_4">Jailor</Name>
+      <Type l10n="GUI_ROLE_CARD_KILLING">Killing</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="true" target="fixed" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="5" comment="">
+      <TargetBehavior target="">OtherAliveConnected</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Lookout</Icon>
+        <Icon id="target1">RoleIcon_Lookout</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_5">Lookout</Name>
+      <Type l10n="GUI_ROLE_CARD_INVESTIGATIVE">Investigative</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="6" comment="">
+      <TargetBehavior target="">Self</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>DayAbility</Tag>
+        <Tag>RestfulDead</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Mayor</Icon>
+        <Icon id="target1">RoleIcon_Mayor</Icon>
+        <Icon id="targetsingle">RoleIcon_Mayor</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_6">Mayor</Name>
+      <Type l10n="GUI_ROLE_CARD_SUPPORT">Support</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="true" target="" mode="instant" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="7" comment="">
+      <TargetBehavior target="">DeadToAlive</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>PostDeathDayAbility</Tag>
+        <Tag>PostDeathDayExpandedAbility</Tag>
+        <Tag>RestfulDead</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Medium</Icon>
+        <Icon id="target1">RoleIcon_Medium</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_7">Medium</Name>
+      <Type l10n="GUI_ROLE_CARD_SUPPORT">Support</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="8" comment="">
+      <TargetBehavior target="1">Retributionist</TargetBehavior>
+      <TargetBehavior target="2">RetributionistSecondary</TargetBehavior>
+      <TargetBehavior target="3">RetributionistSecondary</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu>InPlace</AuxAbilityMenu>
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>RestfulDead</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Retributionist</Icon>
+        <Icon id="target1">RoleIcon_Retributionist</Icon>
+        <Icon id="target2">RoleIcon_Retributionist</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_8">Retributionist</Name>
+      <Type l10n="GUI_ROLE_CARD_SUPPORT">Support</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="9" comment="">
+      <TargetBehavior target="">OtherAliveConnected</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Sheriff</Icon>
+        <Icon id="target1">RoleIcon_Sheriff</Icon>
+      </Icons>
+      <File>Characters/Sheriff</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_9">Sheriff</Name>
+      <Type l10n="GUI_ROLE_CARD_INVESTIGATIVE">Investigative</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="10" comment="">
+      <TargetBehavior target="">OtherAlive</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Spy</Icon>
+        <Icon id="target1">RoleIcon_Spy</Icon>
+      </Icons>
+      <File>Characters/Spy</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_10">Spy</Name>
+      <Type l10n="GUI_ROLE_CARD_INVESTIGATIVE">Investigative</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="11" comment="">
+      <TargetBehavior target="1">AnyAliveConnected</TargetBehavior>
+      <TargetBehavior target="2">DistinctAlive</TargetBehavior>
+      <TargetBehavior target="3">DistinctAlive</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu>InPlace</AuxAbilityMenu>
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>RestfulDead</Tag>
+        <Tag>RoleBlockImmune</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Transporter</Icon>
+        <Icon id="target1">RoleIcon_Transporter</Icon>
+        <Icon id="target2">RoleIcon_Transporter</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_11">Transporter</Name>
+      <Type l10n="GUI_ROLE_CARD_SUPPORT">Support</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="12" comment="">
+      <TargetBehavior target="">OtherAliveConnected</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_VampireHunter</Icon>
+        <Icon id="target1">RoleIcon_VampireHunter</Icon>
+      </Icons>
+      <File>Characters/VampireHunter</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Basic" with_necronomicon="">1</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_12">Vampire Hunter</Name>
+      <Type l10n="GUI_ROLE_CARD_KILLING">Killing</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="13" comment="">
+      <TargetBehavior target="">Self</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>RestfulDead</Tag>
+        <Tag>RoleBlockImmune</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Veteran</Icon>
+        <Icon id="target1">RoleIcon_Veteran</Icon>
+        <Icon id="targetsingle">RoleIcon_Veteran</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Powerful" with_necronomicon="">2</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_13">Veteran</Name>
+      <Type l10n="GUI_ROLE_CARD_KILLING">Killing</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="true" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="14" comment="">
+      <TargetBehavior target="">Vigilante</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>DeferredAbilityUse</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Vigilante</Icon>
+        <Icon id="target1">RoleIcon_Vigilante</Icon>
+      </Icons>
+      <File>Characters/SOSVig</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Basic" with_necronomicon="">1</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_14">Vigilante</Name>
+      <Type l10n="GUI_ROLE_CARD_KILLING">Killing</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="15" comment="">
+      <TargetBehavior target="">NonFactionAliveConnected</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Blackmailer</Icon>
+        <Icon id="target1">RoleIcon_Blackmailer</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_15">Blackmailer</Name>
+      <Type l10n="GUI_ROLE_CARD_SUPPORT">Support</Type>
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="16" comment="">
+      <TargetBehavior target="">NonFactionAliveConnected</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Consigliere</Icon>
+        <Icon id="target1">RoleIcon_Consigliere</Icon>
+      </Icons>
+      <File>Characters/Consigliere</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_16">Consigliere</Name>
+      <Type l10n="GUI_ROLE_CARD_SUPPORT">Support</Type>
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="17" comment="">
+      <TargetBehavior target="">NonFactionAlive</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>RoleBlockImmune</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Consort</Icon>
+        <Icon id="target1">RoleIcon_Consort</Icon>
+      </Icons>
+      <File>Characters/Consort</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_17">Consort</Name>
+      <Type l10n="GUI_ROLE_CARD_SUPPORT">Support</Type>
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="18" comment="">
+      <TargetBehavior target="1">FactionAlive</TargetBehavior>
+      <TargetBehavior target="2">NonFactionAlive</TargetBehavior>
+      <TargetBehavior target="3">NonFactionAlive</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu>InPlace</AuxAbilityMenu>
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Disguiser</Icon>
+        <Icon id="target1">RoleIcon_Disguiser</Icon>
+      </Icons>
+      <File>Characters/Disguiser</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_18">Disguiser</Name>
+      <Type l10n="GUI_ROLE_CARD_DECEPTION">Deception</Type>
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="19" comment="">
+      <TargetBehavior target="">NonFactionAlive</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu>Forger</AuxAbilityMenu>
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Forger</Icon>
+        <Icon id="target1">RoleIcon_Forger</Icon>
+      </Icons>
+      <File>Characters/Forger</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_19">Forger</Name>
+      <Type l10n="GUI_ROLE_CARD_DECEPTION">Deception</Type>
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="20" comment="">
+      <TargetBehavior target="">NonFactionAliveConnected</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>SafeZombie</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Framer</Icon>
+        <Icon id="target1">RoleIcon_Framer</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_20">Framer</Name>
+      <Type l10n="GUI_ROLE_CARD_DECEPTION">Deception</Type>
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="21" comment="">
+      <TargetBehavior target="">NonFactionAliveConnected</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Godfather</Icon>
+        <Icon id="target1">RoleIcon_Godfather</Icon>
+      </Icons>
+      <File>Characters/Godfather</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="Basic" after_attack="" with_necronomicon="">1</Defense>
+      <Attack comment="Basic" with_necronomicon="">1</Attack>
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_21">Godfather</Name>
+      <Type l10n="GUI_ROLE_CARD_KILLING">Killing</Type>
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="22" comment="">
+      <TargetBehavior target="">NonFactionAlive</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>SafeZombie</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Janitor</Icon>
+        <Icon id="target1">RoleIcon_Janitor</Icon>
+      </Icons>
+      <File>Characters/Janitor</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_22">Janitor</Name>
+      <Type l10n="GUI_ROLE_CARD_DECEPTION">Deception</Type>
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="23" comment="">
+      <TargetBehavior target="">NonFactionAliveConnected</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Mafioso</Icon>
+        <Icon id="target1">RoleIcon_Mafioso</Icon>
+      </Icons>
+      <File>Characters/Mafioso</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Basic" with_necronomicon="">1</Attack>
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_23">Mafioso</Name>
+      <Type l10n="GUI_ROLE_CARD_KILLING">Killing</Type>
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="24" comment="">
+      <TargetBehavior target="">NonForgettableDead</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>IndependentWinCondition</Tag>
+        <Tag>RestfulDead</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Amnesiac</Icon>
+        <Icon id="target1">RoleIcon_Amnesiac</Icon>
+      </Icons>
+      <File>Characters/Amnesiac</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_24">Amnesiac</Name>
+      <Type l10n="GUI_ROLE_CARD_BENIGN">Benign</Type>
+      <Color>#22FFFF</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="25" comment="">
+      <TargetBehavior target="">AnyAliveConnected</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>IndependentWinCondition</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Arsonist_1</Icon>
+        <Icon id="target1">RoleIcon_Arsonist_1</Icon>
+        <Icon id="targetsingle">RoleIcon_Arsonist_2</Icon>
+        <Icon id="targetself">RoleIcon_Arsonist_2</Icon>
+      </Icons>
+      <File>Characters/Arsonist</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="Basic" after_attack="" with_necronomicon="">1</Defense>
+      <Attack comment="Unstoppable" with_necronomicon="">3</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_25">Arsonist</Name>
+      <Type l10n="GUI_ROLE_CARD_KILLING">Killing</Type>
+      <Color>#EE7600</Color>
+      <SingleTargetMenu active="true" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="26" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>IndependentWinCondition</Tag>
+        <Tag>RestfulDead</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Executioner</Icon>
+      </Icons>
+      <File>Characters/Executioner</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="Basic" after_attack="" with_necronomicon="">1</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_26">Executioner</Name>
+      <Type l10n="GUI_ROLE_CARD_EVIL">Evil</Type>
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="27" comment="">
+      <TargetBehavior target="">Jester</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>PostDeathNightAbility</Tag>
+        <Tag>NightAbilityIsSilent</Tag>
+        <Tag>IndependentWinCondition</Tag>
+        <Tag>RestfulDead</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Jester</Icon>
+        <Icon id="target1">RoleIcon_Jester</Icon>
+      </Icons>
+      <File>Characters/Jester</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_27">Jester</Name>
+      <Type l10n="GUI_ROLE_CARD_EVIL">Evil</Type>
+      <Color>#F7B3DA</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="28" comment="">
+      <TargetBehavior target="">OtherAliveConnected</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>IndependentWinCondition</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_SerialKiller</Icon>
+        <Icon id="target1">RoleIcon_SerialKiller</Icon>
+        <Icon id="targetsingle">RoleIcon_SerialKiller</Icon>
+      </Icons>
+      <File>Characters/SerialKiller</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="Basic" after_attack="" with_necronomicon="">1</Defense>
+      <Attack comment="Basic" with_necronomicon="">1</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_28">Serial Killer</Name>
+      <Type l10n="GUI_ROLE_CARD_KILLING">Killing</Type>
+      <Color>#336EFF</Color>
+      <SingleTargetMenu active="true" target="special_ability" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="29" comment="">
+      <TargetBehavior target="">Self</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>IndependentWinCondition</Tag>
+        <Tag>RestfulDead</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Survivor</Icon>
+        <Icon id="targetsingle">RoleIcon_Survivor</Icon>
+        <Icon id="target1">RoleIcon_Survivor</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_29">Survivor</Name>
+      <Type l10n="GUI_ROLE_CARD_BENIGN">Benign</Type>
+      <Color>#DDDD00</Color>
+      <SingleTargetMenu active="true" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="30" comment="">
+      <TargetBehavior target="">Convert</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Vampire</Icon>
+        <Icon id="target1">RoleIcon_Vampire</Icon>
+      </Icons>
+      <File>Characters/Vampire</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Basic" with_necronomicon="">1</Attack>
+      <RoleFaction comment="Vampire">4</RoleFaction>
+      <Name l10n="GUI_ROLE_30">Vampire</Name>
+      <Type l10n="GUI_ROLE_CARD_CHAOS">Chaos</Type>
+      <Color>#7B8968</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="31" comment="">
+      <TargetBehavior target="">OtherAlive</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>IndependentWinCondition</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Werewolf</Icon>
+        <Icon id="target1">RoleIcon_Werewolf</Icon>
+      </Icons>
+      <File>Characters/Werewolf</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="Basic" after_attack="" with_necronomicon="">1</Defense>
+      <Attack comment="Powerful" with_necronomicon="">2</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_31">Werewolf</Name>
+      <Type l10n="GUI_ROLE_CARD_KILLING">Killing</Type>
+      <Color>#9F703A</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag>FullmoonAttack</PlayerTag>
+      </PlayerTags>
+      <FullMoonNotice l10n="GAME_104" />
+    </Role>
+    <Role id="32" comment="">
+      <TargetBehavior target="1">OtherAlive</TargetBehavior>
+      <TargetBehavior target="2">AnyAliveConnected</TargetBehavior>
+      <TargetBehavior target="3">AnyAliveConnected</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu>InPlace</AuxAbilityMenu>
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>IndependentWinCondition</Tag>
+        <Tag>RestfulDead</Tag>
+        <Tag>RoleBlockImmune</Tag>
+        <Tag>TargetCanTargetSelf</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Witch</Icon>
+        <Icon id="target1">RoleIcon_Witch</Icon>
+        <Icon id="target2">RoleIcon_Witch_2</Icon>
+      </Icons>
+      <File>Characters/Witch</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="Basic - after_attack None" after_attack="0" with_necronomicon="">1</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_32">Witch</Name>
+      <Type l10n="GUI_ROLE_CARD_EVIL">Evil</Type>
+      <Color>#BF5FFF</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="33" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_TownWins</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_33">Random Town</Name>
+      <Type l10n="" />
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="34" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Investigator</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_34">Town Investigative</Name>
+      <Type l10n="" />
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="35" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Bodyguard</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_35">Town Protective</Name>
+      <Type l10n="" />
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="36" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Vigilante</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_36">Town Killing</Name>
+      <Type l10n="" />
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="37" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Doctor_2</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_37">Town Support</Name>
+      <Type l10n="" />
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="38" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Godfather</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_38">Random Mafia</Name>
+      <Type l10n="" />
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="39" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Consort</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_39">Mafia Support</Name>
+      <Type l10n="" />
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="40" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Disguiser</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_40">Mafia Deception</Name>
+      <Type l10n="" />
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="41" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_NeutralWins</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_41">Random Neutral</Name>
+      <Type l10n="" />
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="42" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Survivor</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_42">Neutral Benign</Name>
+      <Type l10n="" />
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="43" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Witch_2</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_43">Neutral Evil</Name>
+      <Type l10n="" />
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="44" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Arsonist_2</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_44">Neutral Killing</Name>
+      <Type l10n="" />
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="45" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Any</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_45">Any</Name>
+      <Type l10n="" />
+      <Color>#FFFFFF</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="46" comment="">
+      <TargetBehavior target="">OtherAlive</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>SafeZombie</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Crusader</Icon>
+        <Icon id="target1">RoleIcon_Crusader</Icon>
+      </Icons>
+      <File>Characters/Crusader</File>
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Basic" with_necronomicon="">1</Attack>
+      <RoleFaction comment="">1</RoleFaction>
+      <Name l10n="GUI_ROLE_46">Crusader</Name>
+      <Type l10n="GUI_ROLE_CARD_PROTECTIVE">Protective</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="47" comment="">
+      <TargetBehavior target="">OtherAliveConnected</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Tracker</Icon>
+        <Icon id="target1">RoleIcon_Tracker</Icon>
+      </Icons>
+      <File>Characters/Tracker</File>
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_47">Tracker</Name>
+      <Type l10n="GUI_ROLE_CARD_INVESTIGATIVE">Investigative</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="48" comment="">
+      <TargetBehavior target="">Trapper</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>ClientSideTargetTracking</Tag>
+        <Tag>NightAbility</Tag>
+        <Tag>RestfulDead</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Trapper</Icon>
+        <Icon id="target1">RoleIcon_Trapper</Icon>
+        <Icon id="targetsingle">RoleIcon_Trapper</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Powerful" with_necronomicon="">2</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_48">Trapper</Name>
+      <Type l10n="GUI_ROLE_CARD_PROTECTIVE">Protective</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="true" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="49" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>RestfulDead</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Psychic</Icon>
+      </Icons>
+      <File>Characters/Psychic</File>
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_49">Psychic</Name>
+      <Type l10n="GUI_ROLE_CARD_INVESTIGATIVE">Investigative</Type>
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="50" comment="">
+      <TargetBehavior target="">NonFactionAliveConnected</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu>Hypnotist</AuxAbilityMenu>
+      <Tags>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Hypnotist</Icon>
+        <Icon id="target1">RoleIcon_Hypnotist</Icon>
+      </Icons>
+      <File>Characters/Hypnotist</File>
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_50">Hypnotist</Name>
+      <Type l10n="GUI_ROLE_CARD_DECEPTION">Deception</Type>
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="51" comment="">
+      <TargetBehavior target="">NonFactionAlive</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>SafeZombie</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Ambusher</Icon>
+        <Icon id="target1">RoleIcon_Ambusher</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Basic" with_necronomicon="">1</Attack>
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_51">Ambusher</Name>
+      <Type l10n="GUI_ROLE_CARD_KILLING">Killing</Type>
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="52" comment="">
+      <TargetBehavior target="">Plaguebearer</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>IndependentWinCondition</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_PlagueBearer_1</Icon>
+        <Icon id="target1">RoleIcon_PlagueBearer_1</Icon>
+      </Icons>
+      <File>Characters/Plaguebearer</File>
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="Basic" after_attack="" with_necronomicon="">1</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_52">Plaguebearer</Name>
+      <Type l10n="GUI_ROLE_CARD_CHAOS">Chaos</Type>
+      <Color>#CFFF63</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="53" comment="">
+      <TargetBehavior target="">OtherAlive</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>IndependentWinCondition</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Juggernaut</Icon>
+        <Icon id="target1">RoleIcon_Juggernaut</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="Basic" after_attack="" with_necronomicon="">1</Defense>
+      <Attack comment="Powerful" with_necronomicon="">2</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_53">Juggernaut</Name>
+      <Type l10n="GUI_ROLE_CARD_KILLING">Killing</Type>
+      <Color>#A12B56</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag>FullmoonAttack</PlayerTag>
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="54" comment="">
+      <TargetBehavior target="">GuardianAngel</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>PostDeathNightAbility</Tag>
+        <Tag>IndependentWinCondition</Tag>
+        <Tag>GoalTargetIsFixedTarget</Tag>
+        <Tag>SafeZombie</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_GuardianAngel</Icon>
+        <Icon id="target1">RoleIcon_GuardianAngel</Icon>
+        <Icon id="targetsingle">RoleIcon_GuardianAngel</Icon>
+        <Icon id="targetfixed">RoleIcon_GuardianAngel</Icon>
+      </Icons>
+      <File>Characters/Angel</File>
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_54">Guardian Angel</Name>
+      <Type l10n="GUI_ROLE_CARD_BENIGN">Benign</Type>
+      <Color>#FFFFFF</Color>
+      <SingleTargetMenu active="true" target="fixed" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="55" comment="">
+      <TargetBehavior target="">Pirate</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>DayAbility</Tag>
+        <Tag>DayExpandedAbility</Tag>
+        <Tag>IndependentWinCondition</Tag>
+        <Tag>RestfulDead</Tag>
+        <Tag>RoleBlockImmune</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Pirate</Icon>
+        <Icon id="target1">RoleIcon_Pirate</Icon>
+      </Icons>
+      <File>Characters/Pirate</File>
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Powerful" with_necronomicon="">2</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_55">Pirate</Name>
+      <Type l10n="GUI_ROLE_CARD_CHAOS">Chaos</Type>
+      <Color>#EDC240</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="56" comment="">
+      <TargetBehavior target="1">NonFactionAlive</TargetBehavior>
+      <TargetBehavior target="2">AnyAlive</TargetBehavior>
+      <TargetBehavior target="3">AnyAlive</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="1" />
+      <AuxAbilityMenu>InPlace</AuxAbilityMenu>
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>RestfulDead</Tag>
+        <Tag>RoleBlockImmune</Tag>
+        <Tag>TargetCanTargetSelf</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_CovenLeader</Icon>
+        <Icon id="target1">RoleIcon_CovenLeader</Icon>
+        <Icon id="target2">RoleIcon_CovenLeader</Icon>
+      </Icons>
+      <File>Characters/CovenLeader</File>
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="None - with_necronomicon Basic" after_attack="" with_necronomicon="1">0</Defense>
+      <Attack comment="None - with_necronomicon Basic" with_necronomicon="1">0</Attack>
+      <RoleFaction comment="Coven">3</RoleFaction>
+      <Name l10n="GUI_ROLE_56">Coven Leader</Name>
+      <Type l10n="GUI_ROLE_CARD_EVIL">Evil</Type>
+      <Color>#BF5FFF</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="57" comment="">
+      <TargetBehavior target="">OtherAliveConnected</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="" />
+      <AuxAbilityMenu>PotionMaster</AuxAbilityMenu>
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>RestfulDead</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_PotionMaster</Icon>
+        <Icon id="target1">RoleIcon_PotionMaster</Icon>
+      </Icons>
+      <File>Characters/PotionMaster</File>
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Basic" with_necronomicon="">1</Attack>
+      <RoleFaction comment="Coven">3</RoleFaction>
+      <Name l10n="GUI_ROLE_57">Potion Master</Name>
+      <Type l10n="GUI_ROLE_CARD_EVIL">Evil</Type>
+      <Color>#BF5FFF</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="58" comment="">
+      <TargetBehavior target="">NonFactionAliveConnected</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="1" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>ClientSideTargetTracking</Tag>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_HexMaster</Icon>
+        <Icon id="target1">RoleIcon_HexMaster</Icon>
+      </Icons>
+      <File>Characters/HexMaster</File>
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None - with_necronomicon Basic" with_necronomicon="1">0</Attack>
+      <RoleFaction comment="Coven">3</RoleFaction>
+      <Name l10n="GUI_ROLE_58">Hex Master</Name>
+      <Type l10n="GUI_ROLE_CARD_EVIL">Evil</Type>
+      <Color>#BF5FFF</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="59" comment="">
+      <TargetBehavior target="1">Necromancer</TargetBehavior>
+      <TargetBehavior target="2">NecroSecondary</TargetBehavior>
+      <TargetBehavior target="3">NecroSecondary</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="1" />
+      <AuxAbilityMenu>InPlace</AuxAbilityMenu>
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>RestfulDead</Tag>
+        <Tag>RoleBlockImmune</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Necromancer</Icon>
+        <Icon id="targetsingle">RoleIcon_Necromancer</Icon>
+        <Icon id="targetself">RoleIcon_Necromancer</Icon>
+        <Icon id="target1">RoleIcon_Necromancer</Icon>
+        <Icon id="target2">RoleIcon_Necromancer</Icon>
+      </Icons>
+      <File>Characters/Necromancer</File>
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="None" with_necronomicon="">0</Attack>
+      <RoleFaction comment="Coven">3</RoleFaction>
+      <Name l10n="GUI_ROLE_59">Necromancer</Name>
+      <Type l10n="GUI_ROLE_CARD_EVIL">Evil</Type>
+      <Color>#BF5FFF</Color>
+      <SingleTargetMenu active="true" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="60" comment="">
+      <TargetBehavior target="">NonFactionAliveConnected</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>ClientSideTargetTracking</Tag>
+        <Tag>NightAbility</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Poisoner</Icon>
+        <Icon id="target1">RoleIcon_Poisoner</Icon>
+      </Icons>
+      <File>Characters/Poisoner</File>
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Basic" with_necronomicon="">1</Attack>
+      <RoleFaction comment="Coven">3</RoleFaction>
+      <Name l10n="GUI_ROLE_60">Poisoner</Name>
+      <Type l10n="GUI_ROLE_CARD_EVIL">Evil</Type>
+      <Color>#BF5FFF</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="61" comment="">
+      <TargetBehavior target="">Medusa</TargetBehavior>
+      <DeathNote active="true" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>RestfulDead</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Medusa</Icon>
+        <Icon id="target1">RoleIcon_Medusa</Icon>
+        <Icon id="targetsingle">RoleIcon_Medusa</Icon>
+        <Icon id="targetself">RoleIcon_Medusa</Icon>
+      </Icons>
+      <File>Characters/Medusa</File>
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="None" after_attack="" with_necronomicon="">0</Defense>
+      <Attack comment="Powerful" with_necronomicon="">2</Attack>
+      <RoleFaction comment="Coven">3</RoleFaction>
+      <Name l10n="GUI_ROLE_61">Medusa</Name>
+      <Type l10n="GUI_ROLE_CARD_EVIL">Evil</Type>
+      <Color>#BF5FFF</Color>
+      <SingleTargetMenu active="true" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="62" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_CovenLeader</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Coven">3</RoleFaction>
+      <Name l10n="GUI_ROLE_62">Random Coven</Name>
+      <Type l10n="" />
+      <Color>#BF5FFF</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="63" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_TownWins</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_63">Random Town</Name>
+      <Type l10n="" />
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="64" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Investigator</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_64">Town Investigative</Name>
+      <Type l10n="" />
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="65" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Bodyguard</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_65">Town Protective</Name>
+      <Type l10n="" />
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="66" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Vigilante</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_66">Town Killing</Name>
+      <Type l10n="" />
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="67" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Doctor_2</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Town">1</RoleFaction>
+      <Name l10n="GUI_ROLE_67">Coven Town Support</Name>
+      <Type l10n="" />
+      <Color>#7FFF00</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="68" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Godfather</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_68">Random Mafia</Name>
+      <Type l10n="" />
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="69" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Consort</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_69">Mafia Support</Name>
+      <Type l10n="" />
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="70" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Disguiser</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_70">Mafia Deception</Name>
+      <Type l10n="" />
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="71" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_NeutralWins</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_71">Random Neutral</Name>
+      <Type l10n="" />
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="72" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Survivor</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_72">Neutral Benign</Name>
+      <Type l10n="" />
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="73" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Witch_2</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_73">Neutral Evil</Name>
+      <Type l10n="" />
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="74" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Arsonist_2</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_74">Neutral Killing</Name>
+      <Type l10n="" />
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="75" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Any</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_75">Any</Name>
+      <Type l10n="" />
+      <Color>#FFFFFF</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="76" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_PlagueBearer_2</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_76">Coven Neutral Chaos</Name>
+      <Type l10n="" />
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="100" comment="">
+      <TargetBehavior target="">OtherAliveConnected</TargetBehavior>
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>NightAbility</Tag>
+        <Tag>IndependentWinCondition</Tag>
+        <Tag>RoleBlockImmune</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="target1">RoleIcon_PlagueBearer_2</Icon>
+        <Icon id="main">RoleIcon_PlagueBearer_2</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>true</CovenOnly>
+      <Defense comment="Invincible" after_attack="" with_necronomicon="">3</Defense>
+      <Attack comment="Powerful" with_necronomicon="">2</Attack>
+      <RoleFaction comment="" />
+      <Name l10n="GUI_ROLE_100">Pestilence</Name>
+      <Type l10n="GUI_ROLE_CARD_CHAOS">Chaos</Type>
+      <Color>#424242</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor>#CFFF63</OutlineColor>
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="200" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>Forgettable</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Any</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_CLEANED">Cleaned</Name>
+      <Type l10n="" />
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag>Cleaned</PlayerTag>
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="201" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>Forgettable</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Any</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_STONED">Stoned</Name>
+      <Type l10n="" />
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag>Stoned</PlayerTag>
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="202" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags>
+        <Tag>Forgettable</Tag>
+      </Tags>
+      <Icons>
+        <Icon id="main">RoleIcon_Any</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="" />
+      <Name l10n="GUI_HIDDEN">Hidden</Name>
+      <Type l10n="" />
+      <Color>#CCCCCC</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag>Hidden</PlayerTag>
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="631" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Ambusher</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_631">Mafia Killing</Name>
+      <Type l10n="" />
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+    <Role id="632" comment="">
+      <DeathNote active="false" type="" with_necronomicon="" />
+      <AuxAbilityMenu />
+      <Tags />
+      <Icons>
+        <Icon id="main">RoleIcon_Ambusher</Icon>
+      </Icons>
+      <File />
+      <CovenOnly>false</CovenOnly>
+      <Defense comment="" after_attack="" with_necronomicon="" />
+      <Attack comment="" with_necronomicon="" />
+      <RoleFaction comment="Mafia">2</RoleFaction>
+      <Name l10n="GUI_ROLE_632">Mafia Killing</Name>
+      <Type l10n="" />
+      <Color>#DD0000</Color>
+      <SingleTargetMenu active="false" target="" mode="" />
+      <OutlineColor />
+      <PlayerTags>
+        <PlayerTag />
+      </PlayerTags>
+      <FullMoonNotice l10n="" />
+    </Role>
+  </Roles>
+  <RuleSets>
+    <RuleSet id="1">
+      <Name l10n="GUI_ROLELIST_ERROR_ROLES">Role list has invalid roles.</Name>
+      <Rules>
+        <All name="Role Limits">
+          <Limit name="Jailor" role="4" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Mayor" role="6" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Retributionist" role="8" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Veteran" role="13" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Godfather" role="21" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Mafioso" role="23" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Vampire" role="30" max="4" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Werewolf" role="31" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Coven Leader" role="56" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Hex Master" role="58" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Medusa" role="61" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Necromancer" role="59" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Poisoner" role="60" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Potion Master" role="57" max="1" description="GUI_CUSTOM_LOBBY_ROLE_LIMIT" faction="" />
+          <Limit name="Any Limit" role="45" max="4" description="GUI_CUSTOM_LOBBY_ANY_LIMIT" faction="" />
+          <Limit name="Coven Any Limit" role="75" max="4" description="GUI_CUSTOM_LOBBY_ANY_LIMIT" faction="" />
+          <Limit name="Mafia Limit" role="" max="4" description="GUI_CUSTOM_LOBBY_MAFIA_LIMIT" faction="2" />
+          <Limit name="Coven Limit" role="" max="4" description="GUI_CUSTOM_LOBBY_COVEN_LIMIT" faction="3" />
+        </All>
+      </Rules>
+    </RuleSet>
+    <RuleSet id="2">
+      <Name l10n="GUI_ROLELIST_ERROR_FACTION">Role list must include opposing faction.</Name>
+      <Rules>
+        <Any name="Opposing faction">
+          <All name="town and mafia, coven or ...">
+            <Some name="town opponent" count="1">
+              <RuleFaction name="Mafia" id="2" />
+              <RuleFaction name="Coven" id="3" />
+              <RuleRole name="Serial Killer" id="28" />
+              <RuleRole name="Arsonist" id="25" />
+              <RuleRole name="Vampire" id="30" />
+              <RuleRole name="Werewolf" id="31" />
+              <RuleRole name="Witch" id="32" />
+              <RuleRole name="Neutral Killing" id="44" />
+              <RuleRole name="Plaguebearer" id="52" />
+            </Some>
+          </All>
+          <Some name="no town" count="2">
+            <RuleFaction name="Mafia" id="2" />
+            <RuleFaction name="Coven" id="3" />
+            <RuleRole name="Serial Killer" id="28" />
+            <RuleRole name="Arsonist" id="25" />
+            <RuleRole name="Vampire" id="30" />
+            <RuleRole name="Werewolf" id="31" />
+            <RuleRole name="Plaguebearer" id="52" />
+          </Some>
+        </Any>
+      </Rules>
+    </RuleSet>
+    <RuleSet id="3">
+      <Name l10n="GUI_CUSTOM_LOBBY_NEED_MAFIA_KILLING">You must have a Godfather or Mafioso with the Mafia.</Name>
+      <Rules>
+        <Any name="mafia check">
+          <Any name="if mafia, need godfather or mafioso">
+            <RuleRole name="Godfather" id="21" />
+            <RuleRole name="Mafioso" id="23" />
+          </Any>
+          <None name="No other mafia">
+            <RuleRole name="Blackmailer" id="15" />
+            <RuleRole name="Consigliere" id="16" />
+            <RuleRole name="Consort" id="17" />
+            <RuleRole name="Disguiser" id="18" />
+            <RuleRole name="Forger" id="19" />
+            <RuleRole name="Framer" id="20" />
+            <RuleRole name="Janitor" id="22" />
+          </None>
+        </Any>
+      </Rules>
+    </RuleSet>
+    <RuleSet id="4">
+      <Name l10n="GUI_CUSTOM_LOBBY_VHNEED_VAMPIRES">You must have a Vampire with a Vampire Hunter.</Name>
+      <Rules>
+        <Any name="vampire check">
+          <All name="Vampire hunter needs a vampire">
+            <RuleRole name="Vampire Hunter" id="30" />
+            <RuleRole name="Vampire" id="12" />
+          </All>
+          <None name="No vampire">
+            <RuleRole name="Vampire" id="12" />
+          </None>
+        </Any>
+      </Rules>
+    </RuleSet>
+  </RuleSets>
+  <RatingTiers>
+    <RatingTier id="0" icon="LobbyIcons/LobbyIconLegacyBronze.jpg" minimumRating="0" maximumRating="999" color="#CD7F32" gradientColorTL="#F9A451" gradientColorTR="#CD7F32" gradientColorBL="#6B3C0E" gradientColorBR="#FFFFFF">
+      <Name l10n="GUI_BRONZE">Bronze</Name>
+    </RatingTier>
+    <RatingTier id="1" icon="LobbyIcons/LobbyIconLegacySilver.jpg" minimumRating="1000" maximumRating="1399" color="#C0C0C0" gradientColorTL="#E7EAEA" gradientColorTR="#C0C0C0" gradientColorBL="#383838" gradientColorBR="#FFFFFF">
+      <Name l10n="GUI_SILVER">Silver</Name>
+    </RatingTier>
+    <RatingTier id="2" icon="LobbyIcons/LobbyIconLegacyGold.jpg" minimumRating="1400" maximumRating="1599" color="#FFD700" gradientColorTL="#F2D46E" gradientColorTR="#FFD700" gradientColorBL="#83670B" gradientColorBR="#FFFFFF">
+      <Name l10n="GUI_GOLD">Gold</Name>
+    </RatingTier>
+    <RatingTier id="3" icon="LobbyIcons/LobbyIconLegacyPlatinum.jpg" minimumRating="1600" maximumRating="1799" color="#E5E4E2" gradientColorTL="#F6F4F4" gradientColorTR="#E5E4E2" gradientColorBL="#525353" gradientColorBR="#FFFFFF">
+      <Name l10n="GUI_PLATINUM">Platinum</Name>
+    </RatingTier>
+    <RatingTier id="4" icon="LobbyIcons/LobbyIconLegacyDiamond.jpg" minimumRating="1800" maximumRating="1999" color="#E7F9FD" gradientColorTL="#E7F9FD" gradientColorTR="#B9F2FF" gradientColorBL="#97B9C1" gradientColorBR="#FFFFFF">
+      <Name l10n="GUI_DIAMOND">Diamond</Name>
+    </RatingTier>
+    <RatingTier id="5" icon="LobbyIcons/LobbyIconLegacyCrystal.jpg" minimumRating="2000" maximumRating="10000" color="#E7F9FD" gradientColorTL="#E7F9FD" gradientColorTR="#A7D8DE" gradientColorBL="#6B789E" gradientColorBR="#FFFFFF">
+      <Name l10n="GUI_MASTER">Master</Name>
+    </RatingTier>
+  </RatingTiers>
+  <Killers>
+    <Killer id="1" color="#7FFF00" icon="RoleIcon_Jailor" comment="">
+      <Name l10n="">Jailor</Name>
+    </Killer>
+    <Killer id="2" color="#7FFF00" icon="RoleIcon_Vigilante" comment="">
+      <Name l10n="">Vigilante</Name>
+    </Killer>
+    <Killer id="3" color="#DD0000" icon="RoleIcon_Godfather" comment="">
+      <Name l10n="">Mafia</Name>
+    </Killer>
+    <Killer id="4" color="#EE7600" icon="RoleIcon_Arsonist_2" comment="">
+      <Name l10n="">Arsonist</Name>
+    </Killer>
+    <Killer id="5" color="#336EFF" icon="RoleIcon_SerialKiller" comment="">
+      <Name l10n="">Serial Killer</Name>
+    </Killer>
+    <Killer id="6" color="" icon="RoleIcon_NeutralWins" comment="Disconnected/Suicide, no role">
+      <Name l10n="" />
+    </Killer>
+    <Killer id="7" color="#F7B3DA" icon="RoleIcon_Jester" comment="">
+      <Name l10n="">Jester</Name>
+    </Killer>
+    <Killer id="8" color="#7FFF00" icon="RoleIcon_Bodyguard" comment="Bodyguard Protection, no role">
+      <Name l10n="">Bodyguard</Name>
+    </Killer>
+    <Killer id="9" color="#7FFF00" icon="RoleIcon_Bodyguard" comment="">
+      <Name l10n="">Bodyguard</Name>
+    </Killer>
+    <Killer id="10" color="#7FFF00" icon="RoleIcon_Veteran" comment="">
+      <Name l10n="">Veteran</Name>
+    </Killer>
+    <Killer id="11" color="#7FFF00" icon="RoleIcon_Vigilante" comment="">
+      <Name l10n="">Vigilante</Name>
+    </Killer>
+    <Killer id="12" color="#9F703A" icon="RoleIcon_Werewolf" comment="">
+      <Name l10n="">Werewolf</Name>
+    </Killer>
+    <Killer id="13" color="#7FFF00" icon="RoleIcon_VampireHunter" comment="">
+      <Name l10n="">Vampire Hunter</Name>
+    </Killer>
+    <Killer id="14" color="#7B8968" icon="RoleIcon_Vampire" comment="">
+      <Name l10n="">Vampire</Name>
+    </Killer>
+    <Killer id="15" color="#7FFF00" icon="RoleIcon_Crusader" comment="">
+      <Name l10n="">Crusader</Name>
+    </Killer>
+    <Killer id="16" color="#7FFF00" icon="RoleIcon_Trapper" comment="">
+      <Name l10n="">Trapper</Name>
+    </Killer>
+    <Killer id="17" color="#DD0000" icon="RoleIcon_Ambusher" comment="">
+      <Name l10n="">Ambusher</Name>
+    </Killer>
+    <Killer id="18" color="#424242" icon="RoleIcon_PlagueBearer_2" comment="">
+      <Name l10n="">Pestilence, Horseman of the Apocalypse</Name>
+    </Killer>
+    <Killer id="19" color="#631A35" icon="RoleIcon_Juggernaut" comment="">
+      <Name l10n="">Juggernaut</Name>
+    </Killer>
+    <Killer id="20" color="#EDC240" icon="RoleIcon_Pirate" comment="">
+      <Name l10n="">Pirate</Name>
+    </Killer>
+    <Killer id="21" color="#BF5FFF" icon="RoleIcon_CovenLeader" comment="">
+      <Name l10n="">Coven Leader</Name>
+    </Killer>
+    <Killer id="22" color="#BF5FFF" icon="RoleIcon_PotionMaster" comment="">
+      <Name l10n="">Potion Master</Name>
+    </Killer>
+    <Killer id="23" color="#BF5FFF" icon="RoleIcon_HexMaster" comment="">
+      <Name l10n="">Hex Master</Name>
+    </Killer>
+    <Killer id="24" color="#BF5FFF" icon="RoleIcon_Necromancer" comment="">
+      <Name l10n="">Necromancer's Ghoul</Name>
+    </Killer>
+    <Killer id="25" color="#BF5FFF" icon="RoleIcon_Poisoner" comment="">
+      <Name l10n="">Poisoner</Name>
+    </Killer>
+    <Killer id="26" color="#BF5FFF" icon="RoleIcon_Medusa" comment="">
+      <Name l10n="">Medusa</Name>
+    </Killer>
+    <Killer id="27" color="#FF99CC" icon="RoleIcon_LoversWins" comment="Lover death">
+      <Name l10n="GUI_BROKEN_HEART">Broken Heart</Name>
+    </Killer>
+  </Killers>
+  <RoleConversions>
+    <RoleConversion name="Vampire Hunter to Vigilante" id="185" to="14" />
+    <RoleConversion name="Guardian Angel to Survivor" id="214" to="29" />
+    <RoleConversion name="Mafioso to GodFather self" id="136" to="21" />
+    <RoleConversion name="Mafioso to GodFather tell others" id="137" to="21" />
+    <RoleConversion name="Mafia to Mafioso self" id="138" to="23" />
+    <RoleConversion name="Mafia to Mafioso tell others" id="139" to="23" />
+    <RoleConversion name="Anyone to Vampire" id="180" to="30" />
+    <RoleConversion name="Executioner to Jester" id="140" to="27" />
+    <RoleConversion name="Plaguebearer to Pestilence" id="211" to="100" />
+  </RoleConversions>
+  <RandomLists>
+    <RandomList name="Random Town List" id="33">
+      <RandomListRole name="Town Investigative" role="34" />
+      <RandomListRole name="Town Killing" role="36" />
+      <RandomListRole name="Town Protective" role="35" />
+      <RandomListRole name="Town Support" role="37" />
+    </RandomList>
+    <RandomList name="Town Investigative List" id="34">
+      <RandomListRole name="Investigator" role="3" />
+      <RandomListRole name="Lookout" role="5" />
+      <RandomListRole name="Sheriff" role="9" />
+      <RandomListRole name="Spy" role="10" />
+    </RandomList>
+    <RandomList name="Town Protective List" id="35">
+      <RandomListRole name="Bodyguard" role="0" />
+      <RandomListRole name="Doctor" role="1" />
+    </RandomList>
+    <RandomList name="Town Killing List" id="36">
+      <RandomListRole name="Jailor" role="4" />
+      <RandomListRole name="Vampire Hunter" role="12" />
+      <RandomListRole name="Veteran" role="13" />
+      <RandomListRole name="Vigilante" role="14" />
+    </RandomList>
+    <RandomList name="Town Support List" id="37">
+      <RandomListRole name="Escort" role="2" />
+      <RandomListRole name="Mayor" role="6" />
+      <RandomListRole name="Medium" role="7" />
+      <RandomListRole name="Retributionist" role="8" />
+      <RandomListRole name="Transporter" role="11" />
+    </RandomList>
+    <RandomList name="Random Mafia List" id="38">
+      <RandomListRole name="Mafia Killing" role="631" />
+      <RandomListRole name="Mafia Deception" role="40" />
+      <RandomListRole name="Mafia Support" role="39" />
+    </RandomList>
+    <RandomList name="Mafia Support List" id="39">
+      <RandomListRole name="Blackmailer" role="15" />
+      <RandomListRole name="Consigliere" role="16" />
+      <RandomListRole name="Consort" role="17" />
+    </RandomList>
+    <RandomList name="Mafia Deception List" id="40">
+      <RandomListRole name="Disguiser" role="18" />
+      <RandomListRole name="Forger" role="19" />
+      <RandomListRole name="Framer" role="20" />
+      <RandomListRole name="Hypnotist" role="50" />
+      <RandomListRole name="Janitor" role="22" />
+    </RandomList>
+    <RandomList name="Random Neutral List" id="41">
+      <RandomListRole name="Neutral Benign" role="42" />
+      <RandomListRole name="Neutral Evil" role="43" />
+      <RandomListRole name="Neutral Killing" role="44" />
+    </RandomList>
+    <RandomList name="Neutral Benign List" id="42">
+      <RandomListRole name="Amnesiac" role="24" />
+      <RandomListRole name="Survivor" role="29" />
+    </RandomList>
+    <RandomList name="Neutral Evil List" id="43">
+      <RandomListRole name="Executioner" role="26" />
+      <RandomListRole name="Jester" role="27" />
+      <RandomListRole name="Witch" role="32" />
+    </RandomList>
+    <RandomList name="Neutral Killing List" id="44">
+      <RandomListRole name="Arsonist" role="25" />
+      <RandomListRole name="Serial Killer" role="28" />
+      <RandomListRole name="Werewolf" role="31" />
+    </RandomList>
+    <RandomList name="Any List" id="45">
+      <RandomListRole name="Random Town" role="33" />
+      <RandomListRole name="Random Mafia" role="38" />
+      <RandomListRole name="Random Neutral" role="41" />
+    </RandomList>
+    <RandomList name="Coven Random Coven List" id="62">
+      <RandomListRole name="Coven Leader" role="56" />
+      <RandomListRole name="Hex Master" role="58" />
+      <RandomListRole name="Medusa" role="61" />
+      <RandomListRole name="Necromancer" role="59" />
+      <RandomListRole name="Poisoner" role="60" />
+      <RandomListRole name="Potion Master" role="57" />
+    </RandomList>
+    <RandomList name="Coven Random Town List" id="63">
+      <RandomListRole name="Coven Town Investigative" role="64" />
+      <RandomListRole name="Coven Town Killing" role="66" />
+      <RandomListRole name="Coven Town Protective" role="65" />
+      <RandomListRole name="Coven Town Support" role="67" />
+    </RandomList>
+    <RandomList name="Coven Town Investigative List" id="64">
+      <RandomListRole name="Investigator" role="3" />
+      <RandomListRole name="Lookout" role="5" />
+      <RandomListRole name="Psychic" role="49" />
+      <RandomListRole name="Sheriff" role="9" />
+      <RandomListRole name="Spy" role="10" />
+      <RandomListRole name="Tracker" role="47" />
+    </RandomList>
+    <RandomList name="Coven Town Protective List" id="65">
+      <RandomListRole name="Bodyguard" role="0" />
+      <RandomListRole name="Crusader" role="46" />
+      <RandomListRole name="Doctor" role="1" />
+      <RandomListRole name="Trapper" role="48" />
+    </RandomList>
+    <RandomList name="Coven Town Killing List" id="66">
+      <RandomListRole name="Jailor" role="4" />
+      <RandomListRole name="Vampire Hunter" role="12" />
+      <RandomListRole name="Veteran" role="13" />
+      <RandomListRole name="Vigilante" role="14" />
+    </RandomList>
+    <RandomList name="Coven Town Support List" id="67">
+      <RandomListRole name="Escort" role="2" />
+      <RandomListRole name="Mayor" role="6" />
+      <RandomListRole name="Medium" role="7" />
+      <RandomListRole name="Retributionist" role="8" />
+      <RandomListRole name="Transporter" role="11" />
+    </RandomList>
+    <RandomList name="Coven Random Mafia List" id="68">
+      <RandomListRole name="Mafia Killing" role="632" />
+      <RandomListRole name="Mafia Deception" role="70" />
+      <RandomListRole name="Mafia Support" role="69" />
+    </RandomList>
+    <RandomList name="Coven Mafia Support List" id="69">
+      <RandomListRole name="Blackmailer" role="15" />
+      <RandomListRole name="Consigliere" role="16" />
+      <RandomListRole name="Consort" role="17" />
+    </RandomList>
+    <RandomList name="Coven Mafia Deception List" id="70">
+      <RandomListRole name="Disguiser" role="18" />
+      <RandomListRole name="Forger" role="19" />
+      <RandomListRole name="Framer" role="20" />
+      <RandomListRole name="Hypnotist" role="50" />
+      <RandomListRole name="Janitor" role="22" />
+    </RandomList>
+    <RandomList name="Coven Random Neutral List" id="71">
+      <RandomListRole name="Neutral Benign" role="72" />
+      <RandomListRole name="Neutral Chaos" role="76" />
+      <RandomListRole name="Neutral Evil" role="73" />
+      <RandomListRole name="Neutral Killing" role="74" />
+    </RandomList>
+    <RandomList name="Coven Neutral Benign List" id="72">
+      <RandomListRole name="Amnesiac" role="24" />
+      <RandomListRole name="Guardian Angel" role="54" />
+      <RandomListRole name="Survivor" role="29" />
+    </RandomList>
+    <RandomList name="Coven Neutral Evil List" id="73">
+      <RandomListRole name="Executioner" role="26" />
+      <RandomListRole name="Jester" role="27" />
+    </RandomList>
+    <RandomList name="Coven Neutral Killing List" id="74">
+      <RandomListRole name="Arsonist" role="25" />
+      <RandomListRole name="Juggernaut" role="53" />
+      <RandomListRole name="Serial Killer" role="28" />
+      <RandomListRole name="Werewolf" role="31" />
+    </RandomList>
+    <RandomList name="Coven Any" id="75">
+      <RandomListRole name="Coven Random Town" role="63" />
+      <RandomListRole name="Coven Random Mafia" role="68" />
+      <RandomListRole name="Coven Random Coven" role="62" />
+      <RandomListRole name="Coven Random Neutral" role="71" />
+    </RandomList>
+    <RandomList name="Coven Neutral Chaos List" id="76">
+      <RandomListRole name="Pestilence" role="100" />
+      <RandomListRole name="Pirate" role="55" />
+      <RandomListRole name="Plaguebearer" role="52" />
+      <RandomListRole name="Vampire" role="30" />
+    </RandomList>
+  </RandomLists>
+  <WinningGroups>
+    <WinningGroup name="Town" id="1" color="#7FFF00" isDraw="false" />
+    <WinningGroup name="Mafia" id="2" color="#DD0000" isDraw="false" />
+    <WinningGroup name="Serial Killer" id="3" color="#3333FF" isDraw="false" />
+    <WinningGroup name="Arsonist" id="4" color="#EE7600" isDraw="false" />
+    <WinningGroup name="Witch" id="5" color="#BF5FFF" isDraw="false" />
+    <WinningGroup name="Amnesiac" id="6" color="#22FFFF" isDraw="false" />
+    <WinningGroup name="Executioner" id="7" color="#CCCCCC" isDraw="false" />
+    <WinningGroup name="Survivor" id="8" color="#DDDD00" isDraw="false" />
+    <WinningGroup name="Neutrals" id="9" color="#CCCCCC" isDraw="false" />
+    <WinningGroup name="Jester" id="10" color="#F7B3DA" isDraw="false" />
+    <WinningGroup name="Draw" id="11" color="#99CCFF" isDraw="true" />
+    <WinningGroup name="Werewolf" id="12" color="#9F703A" isDraw="false" />
+    <WinningGroup name="Vampire" id="13" color="#7B8968" isDraw="false" />
+    <WinningGroup name="Coven" id="14" color="#BF5FFF" isDraw="false" />
+    <WinningGroup name="Pestilence" id="15" color="#424242" isDraw="false" />
+    <WinningGroup name="Juggernaut" id="16" color="#A12B56" isDraw="false" />
+    <WinningGroup name="Guardian Angel" id="17" color="#FFFFFF" isDraw="false" />
+    <WinningGroup name="Pirate" id="18" color="#EDC240" isDraw="false" />
+    <WinningGroup name="Lovers" id="19" color="#FF99FF" isDraw="false" />
+    <WinningGroup name="Plaguebearer" id="20" color="#CFFF63" isDraw="false" />
+  </WinningGroups>
+</GameRules>
