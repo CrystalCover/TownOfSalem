@@ -8,7 +8,7 @@ This mod can only be installed for the **Steam version**.
 
 ## Updating
 1. Replace the old *QualityOfSalem.dll* with the new one.
-2. Delete *ExtendedStringTable.en-USS.xml* located within "\TownOfSalem\BepInEx\config".
+2. Delete *ExtendedStringTable.en-US.xml* located within "\TownOfSalem\BepInEx\config".
 3. Optionally, delete *GameRules.xml* located within "\TownOfSalem\TownOfSalem_Data\StreamingAssets\res\WebAssets\XMLData".
 
 ## Features
@@ -21,7 +21,7 @@ All features are client-side and do not affect the gameplay for you or others.
 - Toaster notifications for party invites appear again.
 
 ### Reversals
-- T\*v\*rn K\*\*p\*r and B\*\*tl\*gg\*r are renamed back to Escort and Consort, their role icons and all associated strings are also changed back.
+- T\*v\*rn K\*\*p\*r and B\*\*tl\*gg\*r are renamed back to Escort and Consort; their role icons and all associated strings are also changed back.
 - The word *hang* is replaced back with the word *lynch*.
 - Gender pronouns, *he* and *she*, are added back.
 - Suicidal death reasons are restored.
