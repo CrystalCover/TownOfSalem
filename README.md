@@ -1,4 +1,4 @@
-# Quality of Salem v2.0.12 (WIP)
+# Quality of Salem v2.0.13 (WIP)
 This mod is made for the **Steam version**.
 
 ## Installation
@@ -15,11 +15,12 @@ This mod is made for the **Steam version**.
 All features are client-side and do not affect the gameplay for you or others.
 
 ### Fixes
-- When you are a Blackmailer and whisper to someone, you will no longer hear your own whisper as if it came from someone else.
-- Day and night headers in the chat log are now properly filtered in the Spanish language.
-- If you end up visiting a jailed player as an Arsonist, the jailed player will no longer be shown as doused.
-- Toaster notifications for party invites appear again.
 - Upon role conversions, avatar name labels will be properly updated.
+- Chat messages containing invalid characters (chat exploits) will be shown as "[SenderAccountName] has sent an invalid message.", and the sender's account name will be colored in black until relaunch of the application.
+- Day and night headers in the chat log are now properly filtered in the Spanish language.
+- Toaster notifications for party invites appear again.
+- When you are a Blackmailer and whisper to someone, you will no longer hear your own whisper as if it came from someone else.
+- If you end up visiting a jailed player as an Arsonist, the jailed player will no longer be shown as doused.
 
 ### Reversals
 - T\*v\*rn K\*\*p\*r and B\*\*tl\*gg\*r are renamed back to Escort and Consort; their role icons and all associated strings are also changed back.
