@@ -1,4 +1,4 @@
-# Quality of Salem v2.0.13 (WIP)
+# Quality of Salem v2.0.15 (WIP)
 This mod is made for the **Steam version**.
 
 ## Installation
