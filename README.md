@@ -1,4 +1,4 @@
-# Quality of Salem v2.0.15 (WIP)
+# Quality of Salem v2.0.18 (WIP)
 This mod is made for the **Steam version**.
 
 ## Installation
@@ -15,12 +15,14 @@ This mod is made for the **Steam version**.
 All features are client-side and do not affect the gameplay for you or others.
 
 ### Fixes
-- Upon role conversions, avatar name labels will be properly updated.
+- Upon role conversions, avatar name label colors will be properly updated.
 - Chat messages containing invalid characters (chat exploits) will be shown as "[SenderAccountName] has sent an invalid message.", and the sender's account name will be colored in black until relaunch of the application.
 - Day and night headers in the chat log are now properly filtered in the Spanish language.
+- The chat log will no longer scroll to the bottom every time you change the position filter.
 - Toaster notifications for party invites appear again.
 - When you are a Blackmailer and whisper to someone, you will no longer hear your own whisper as if it came from someone else.
 - If you end up visiting a jailed player as an Arsonist, the jailed player will no longer be shown as doused.
+- Some stuff in the friend service has been made more sane.
 
 ### Reversals
 - T\*v\*rn K\*\*p\*r and B\*\*tl\*gg\*r are renamed back to Escort and Consort; their role icons and all associated strings are also changed back.
@@ -29,16 +31,18 @@ All features are client-side and do not affect the gameplay for you or others.
 - Suicidal death reasons are restored.
 
 ### Enhancements
+- Role card, role list, and graveyard panels can now be automatically hidden if the relevant settings are enabled.
+- The Necronomicon and the full moon notices will no longer display if the Coven (for the former), the Werewolf (for the latter), or the Juggernaut (for the latter) cannot appear in the game.
 - When deaths are being announced, the messages appearing in the chat log will also appear in the chat box. (e.g., "He was killed by a member of the Mafia.")
 - Any name references (player number + player name) and whispers will now also be filtered in the chat log.
+- Night chat message backgrounds will be colorized if the player's role is known or the sender is a Medium, the Jailor, or a Vampire (for Vampire Hunters) if the relevant setting is enabled.
 - Player names will now have one of the following colors in the lobby chat: gold for you and best friends, light blue for non-best friends, red for blocked users, and grey for others.
 - Messages of blocked users in lobbies can now be hidden if the relevant setting is enabled.
 - Some restrictions in the custom lobbies are now removed, including: opposing faction requirement, Vampire requirement for Vampire Hunters, and role limit for non-unique roles (but not the faction limits).
 - When the game ends, if the Town or lovers win, the "victory" music will play for everyone; if an evil faction, Witches, Neutral Killings, or the Plaguebearer/Pestilence win, the "defeat" music will play for everyone; if others win, the "victory" music will play only for them; and a celebration sound effect will play only for the winners.
 - Name references that previously did not have player position numbers now have them. Player position numbers now appear during name selection. The winners in the victory message will now be sorted by their position numbers.
-- The pre-game and end-game lobbies now have new commands: /friend \[userName\], /unfriend \[userName\], /sendfriendmessage \[userName\] \[message\], /listfriends, /showonlinefriends, /block \[userName\], /unblock \[userName\], and /listblockedusers.
-- The Necronomicon and the full moon notices will no longer display if the Coven (for the former), the Werewolf (for the latter), or the Juggernaut (for the latter) cannot appear in the game.
-- The Jailor lock and blood drop animations can now be disabled from settings.
+- Party, pre-game, and end-game lobbies now have new commands: /friend \[userName\], /unfriend \[userName\], /sendfriendmessage \[userName\] \[message\], /listfriends, /showonlinefriends, /block \[userName\], /unblock \[userName\], and /listblockedusers.
+- The jail lock and blood drop animations can now be disabled from settings.
 - The role list in non-custom lobbies will always show the full role list, regardless of the number of players in the lobby.
 
 ### New
