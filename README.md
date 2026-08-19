@@ -4,7 +4,7 @@ This mod is made for the **Steam version** on Windows.
 ## Installation
 1. Install the latest version of [BepInEx](https://github.com/BepInEx/BepInEx/releases) for 64-bit.
 2. Place *QualityOfSalem.dll* within "\TownOfSalem\BepInEx\plugins"; create the folders if missing.
-3. Run *TownOfSalem.exe*.
+3. Launch the game.
 
 ## Updating
 1. Replace the old *QualityOfSalem.dll* with the new one.
