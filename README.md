@@ -1,5 +1,6 @@
 # Quality of Salem v2.0.20 (WiP)
-This mod is made for the **Steam version** on Windows. It is currently a **Work in Progress**.
+This mod is made for the [**Steam version**](https://store.steampowered.com/app/334230) on Windows.<br>
+It is currently a **Work in Progress**.
 
 ## Installation
 1. Install the latest version of [BepInEx](https://github.com/BepInEx/BepInEx/releases) for 64-bit.
