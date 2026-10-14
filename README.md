@@ -1,4 +1,4 @@
-# Quality of Salem v2.0.20 (WiP)
+# Quality of Salem v2.0.23 (WiP)
 This mod is made for the [**Steam version**](https://store.steampowered.com/app/334230) on Windows.<br>
 It is currently a **Work in Progress**.
 
