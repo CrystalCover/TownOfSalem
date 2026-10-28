@@ -1,4 +1,4 @@
-# Quality of Salem v2.0.24 (WiP)
+# Quality of Salem v2.0.26 (WiP)
 This mod is made for the [**Steam version**](https://store.steampowered.com/app/334230) on Windows.<br>
 It is currently a **Work in Progress**.
 
@@ -44,7 +44,7 @@ All features are client-side and do not affect the gameplay for you or others.
 - Pressing the Escape key will no longer undo the changes on the forged will while editing it.
 - Some restrictions in the custom lobbies are now removed, including: opposing faction requirement, Vampire requirement for Vampire Hunters, and role limit for non-unique roles (but not the faction limits).
 - When the game ends, if the Town or lovers win, the "victory" music will play for everyone; if an evil faction, Witches, Neutral Killings, or the Plaguebearer/Pestilence win, the "defeat" music will play for everyone; if others win, the "victory" music will play only for them; and a celebration sound effect will play only for the winners.
-- Name references that previously did not have player position numbers now have them. Player position numbers now appear during name selection. The winners in the victory message will now be sorted by their position numbers.
+- Name references that previously did not have player position numbers now have them. Player position numbers now appear during name selection. The winner names in the victory message will now be sorted by their position numbers.
 - Party, pre-game, and end-game lobbies now have new commands: /friend \[userName\], /unfriend \[userName\], /sendfriendmessage \[userName\] \[message\], /listfriends, /showonlinefriends, /block \[userName\], /unblock \[userName\], and /listblockedusers.
 - The jail lock and blood drop animations can now be disabled from settings.
 - The role list in non-custom lobbies will always show the full role list, regardless of the number of players in the lobby.
