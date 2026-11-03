@@ -1,4 +1,4 @@
-# Quality of Salem v2.0.26 (WiP)
+# Quality of Salem v2.1.2 (WiP)
 This mod is made for the [**Steam version**](https://store.steampowered.com/app/334230) on Windows.<br>
 It is currently a **Work in Progress**.
 
@@ -6,12 +6,13 @@ It is currently a **Work in Progress**.
 1. Install the latest version of [BepInEx](https://github.com/BepInEx/BepInEx/releases) for 64-bit.
 2. Place *QualityOfSalem.dll* within "\TownOfSalem\BepInEx\plugins"; create the folders if missing.
 3. Launch the game.<br>
-   If you encounter an error during the loading screen, also place ExtendedStringTable.en-US.xml within "\TownOfSalem\BepInEx\config".
+   If you encounter an error during the loading screen, also place ExtendedStringTable.en-US.xml and ExtendedCustomization.xml within "\TownOfSalem\BepInEx\config".
 
 ## Updating
 1. Replace the old *QualityOfSalem.dll* with the new one.
 2. Delete *ExtendedStringTable.en-US.xml* located within "\TownOfSalem\BepInEx\config".<br>This file is most likely updated between versions.
-3. Optionally, delete *GameRules.xml* located within "\TownOfSalem\TownOfSalem_Data\StreamingAssets\res\WebAssets\XMLData".<br>This file is most likely not updated between versions.
+3. Optionally, delete *ExtendedCustomization.xml* located within "\TownOfSalem\BepInEx\config". This file is most likely not updated between versions.
+4. ~~Optionally, delete *GameRules.xml* located within "\TownOfSalem\TownOfSalem_Data\StreamingAssets\res\WebAssets\XMLData".<br>This file is most likely not updated between versions.~~
 
 ## Features
 All features are client-side and do not affect the gameplay for you or others.
@@ -45,7 +46,7 @@ All features are client-side and do not affect the gameplay for you or others.
 - Some restrictions in the custom lobbies are now removed, including: opposing faction requirement, Vampire requirement for Vampire Hunters, and role limit for non-unique roles (but not the faction limits).
 - When the game ends, if the Town or lovers win, the "victory" music will play for everyone; if an evil faction, Witches, Neutral Killings, or the Plaguebearer/Pestilence win, the "defeat" music will play for everyone; if others win, the "victory" music will play only for them; and a celebration sound effect will play only for the winners.
 - Name references that previously did not have player position numbers now have them. Player position numbers now appear during name selection. The winner names in the victory message will now be sorted by their position numbers.
-- Party, pre-game, and end-game lobbies now have new commands: /friend \[userName\], /unfriend \[userName\], /sendfriendmessage \[userName\] \[message\], /listfriends, /showonlinefriends, /block \[userName\], /unblock \[userName\], and /listblockedusers.
+- Party, pre-game, and end-game lobbies now have new commands: /friend \[userName\], /unfriend \[userName\], /message \[userName\] \[message\], /block \[userName\], /unblock \[userName\].
 - The jail lock and blood drop animations can now be disabled from settings.
 - The role list in non-custom lobbies will always show the full role list, regardless of the number of players in the lobby.
 
@@ -54,7 +55,9 @@ All features are client-side and do not affect the gameplay for you or others.
 - Lobby users now have friend and block buttons for you to block or unblock them, friend or unfriend them, or accept or decline their friend request.
 - When a friend goes online or offline, or when someone friends or unfriends you, you'll get notified by a toaster notification, if enabled.
 - Some in-game events now have sound effects: being set on fire by an Arsonist, being controlled (regardless of being hypnotized), announcement of an Amnesiac remembering a role, announcement of the Mayor revealing, and announcement of a Guardian Angel protecting their target.
-- Notification messages regarding the friends and block system will be displayed in the pre-game and end-game lobbies.
+- Notification messages regarding the friends and block system will be displayed in the party, pre-game, and end-game lobbies.
+- At night, messages sent by roles or alive players will have colorful backgrounds based on their roles.
+- The pre-game lobby now contains the friends panel from the home scene.
 
 ### Discord Rich Presence
 - You can present your Town of Salem activity on Discord by installing [Salem Rich Presence](https://github.com/CrystalCover/TownOfSalem-SalemRichPresence)!
