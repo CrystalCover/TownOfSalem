@@ -1,4 +1,4 @@
-# Quality of Salem v2.1.2 (WiP)
+# Quality of Salem v2.2.5 (WiP)
 This mod is made for the [**Steam version**](https://store.steampowered.com/app/334230) on Windows.<br>
 It is currently a **Work in Progress**.
 
@@ -12,7 +12,7 @@ It is currently a **Work in Progress**.
 1. Replace the old *QualityOfSalem.dll* with the new one.
 2. Delete *ExtendedStringTable.en-US.xml* located within "\TownOfSalem\BepInEx\config".<br>This file is most likely updated between versions.
 3. Optionally, delete *ExtendedCustomization.xml* located within "\TownOfSalem\BepInEx\config". This file is most likely not updated between versions.
-4. ~~Optionally, delete *GameRules.xml* located within "\TownOfSalem\TownOfSalem_Data\StreamingAssets\res\WebAssets\XMLData".<br>This file is most likely not updated between versions.~~
+4. Optionally, delete *GameRules.xml* located within "\TownOfSalem\TownOfSalem_Data\StreamingAssets\res\WebAssets\XMLData".<br>This file is most likely not updated between versions.
 
 ## Features
 All features are client-side and do not affect the gameplay for you or others.
@@ -54,10 +54,10 @@ All features are client-side and do not affect the gameplay for you or others.
 - If you enabled the "Remember Me" (now "Log Me In Automatically") checkbox on the login screen, the game will automatically log you in the next time the application is launched.
 - Lobby users now have friend and block buttons for you to block or unblock them, friend or unfriend them, or accept or decline their friend request.
 - When a friend goes online or offline, or when someone friends or unfriends you, you'll get notified by a toaster notification, if enabled.
-- Some in-game events now have sound effects: being set on fire by an Arsonist, being controlled (regardless of being hypnotized), announcement of an Amnesiac remembering a role, announcement of the Mayor revealing, and announcement of a Guardian Angel protecting their target.
+- Some in-game events now have sound effects: being set on fire by an Arsonist, being controlled (regardless of being hypnotized), announcement of an Amnesiac remembering a role, announcement of the Mayor revealing, announcement of a Guardian Angel protecting their target, and earning achievements.
 - Notification messages regarding the friends and block system will be displayed in the party, pre-game, and end-game lobbies.
 - At night, messages sent by roles or alive players will have colorful backgrounds based on their roles.
-- The pre-game lobby now contains the friends panel from the home scene.
+- The pre-game lobby now contains the friends panel and the toaster notifications from the home scene.
 
 ### Discord Rich Presence
 - You can present your Town of Salem activity on Discord by installing [Salem Rich Presence](https://github.com/CrystalCover/TownOfSalem-SalemRichPresence)!
